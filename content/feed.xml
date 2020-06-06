@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-05-13T23:23:01+08:00</updated><id>/feed.xml</id><title type="html">Apache RocketMQ</title><subtitle>The homepage of RocketMQ.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/rmq-logo.png&quot;, &quot;bio&quot;=&gt;&quot;An open source distributed messaging and streaming data platform.&quot;, &quot;location&quot;=&gt;&quot;Hangzhou, China&quot;, &quot;email&quot;=&gt;&quot;dev@rocketmq.apache.org&quot;, &quot;uri&quot;=&gt;&quot;http://rocketmq.apache.org&quot;, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;apache/rocketmq&quot;, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;&quot;questions/tagged/rocketmq&quot;, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;&quot;ApacheRocketMQ&quot;, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil, &quot;quora&quot;=&gt;&quot;topic/RocketMQ&quot;}</name><email>dev@rocketmq.apache.org</email><uri>http://rocketmq.apache.org</uri></author><entry><title type="html">Release Notes - Apache RocketMQ Client CPP- Version 2.2.0</title><link href="/release_notes/release-notes-rocketmq-client-cpp-2.2.0/" rel="alternate" type="text/html" title="Release Notes - Apache RocketMQ Client CPP- Version 2.2.0" /><published>2020-04-02T00:00:00+08:00</published><updated>2020-04-02T00:00:00+08:00</updated><id>/release_notes/release-notes-rocketmq-client-cpp-2.2.0</id><content type="html" xml:base="/release_notes/release-notes-rocketmq-client-cpp-2.2.0/">&lt;p&gt;Below is a summary of the issues addressed in the version 2.2.0 release of RocketMQ Client CPP. For full documentation of the release, a guide to get started, please refer to &lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp&quot;&gt;Quick Start&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-06-06T10:17:15+08:00</updated><id>/feed.xml</id><title type="html">Apache RocketMQ</title><subtitle>The homepage of RocketMQ.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/rmq-logo.png&quot;, &quot;bio&quot;=&gt;&quot;An open source distributed messaging and streaming data platform.&quot;, &quot;location&quot;=&gt;&quot;Hangzhou, China&quot;, &quot;email&quot;=&gt;&quot;dev@rocketmq.apache.org&quot;, &quot;uri&quot;=&gt;&quot;http://rocketmq.apache.org&quot;, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;apache/rocketmq&quot;, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;&quot;questions/tagged/rocketmq&quot;, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;&quot;ApacheRocketMQ&quot;, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil, &quot;quora&quot;=&gt;&quot;topic/RocketMQ&quot;}</name><email>dev@rocketmq.apache.org</email><uri>http://rocketmq.apache.org</uri></author><entry><title type="html">Release Notes - Apache RocketMQ - Version 4.7.1</title><link href="/release_notes/release-notes-4.7.1/" rel="alternate" type="text/html" title="Release Notes - Apache RocketMQ - Version 4.7.1" /><published>2020-05-30T00:00:00+08:00</published><updated>2020-05-30T00:00:00+08:00</updated><id>/release_notes/release-notes-4.7.1</id><content type="html" xml:base="/release_notes/release-notes-4.7.1/">&lt;p&gt;Below is a summary of the issues addressed in the 4.7.1 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to &lt;a href=&quot;/docs/quick-start/&quot;&gt;Quick Start&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt; Download the 4.7.1 release&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Source: &lt;a href=&quot;https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.1/rocketmq-all-4.7.1-source-release.zip&quot;&gt;rocketmq-all-4.7.1-source-release.zip&lt;/a&gt; [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.1/rocketmq-all-4.7.1-source-release.zip.asc&quot;&gt;PGP&lt;/a&gt;] [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.1/rocketmq-all-4.7.1-source-release.zip.sha512&quot;&gt;SHA512&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Binary: &lt;a href=&quot;https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.1/rocketmq-all-4.7.1-bin-release.zip&quot;&gt;rocketmq-all-4.7.1-bin-release.zip&lt;/a&gt; [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.1/rocketmq-all-4.7.1-bin-release.zip.asc&quot;&gt;PGP&lt;/a&gt;] [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.1/rocketmq-all-4.7.1-bin-release.zip.sha512&quot;&gt;SHA512&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;improvement&quot;&gt;Improvement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2065&quot;&gt;ISSUE-2065&lt;/a&gt;] -  Fix fastjson version for RCE problem.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2044&quot;&gt;ISSUE-2044&lt;/a&gt;] -  Fix DefaultLitePullConsumerImpl NPE.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2042&quot;&gt;ISSUE-2042&lt;/a&gt;] -  Select a new nameserver when the old one removed from namesrvAddrList.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2036&quot;&gt;ISSUE-2036&lt;/a&gt;] -  Skip the null value in messageProperties2String method.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2025&quot;&gt;ISSUE-2025&lt;/a&gt;] -  Polish the code in MQClientAPIImpl#processSendResponse method.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2020&quot;&gt;ISSUE-2020&lt;/a&gt;] -  Replace notify blocks with existing method wakeup in ServiceThread.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2007&quot;&gt;ISSUE-2007&lt;/a&gt;] -  Upgrade fastjson version to prevent serious security problem.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2003&quot;&gt;ISSUE-2003&lt;/a&gt;] -  Delete useless code about DatagramSocket.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1992&quot;&gt;ISSUE-1992&lt;/a&gt;] -  Polish the log in Broker2Client.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1988&quot;&gt;ISSUE-1988&lt;/a&gt;] -  Fix the issue that can not update messageDelay correctly with mqadmin updateBrokerConfig command.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1978&quot;&gt;ISSUE-1978&lt;/a&gt;] -  Fix MessageExt#getBornHostString null pointer exception.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1976&quot;&gt;ISSUE-1976&lt;/a&gt;] -  System topic should add permission checking globally.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1950&quot;&gt;ISSUE-1950&lt;/a&gt;] -  Fix DefaultMQProducer didn't shutdown completely.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1931&quot;&gt;ISSUE-1931&lt;/a&gt;] -  Fix the issue of duplicate doAfterRpcHooks.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1912&quot;&gt;ISSUE-1912&lt;/a&gt;] -  Polish the commited offset logic for the lite default pull consumer.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1906&quot;&gt;ISSUE-1906&lt;/a&gt;] -  BooleanConstantExpression might lead to class loading deadlock.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1895&quot;&gt;ISSUE-1895&lt;/a&gt;] -  The flush disk timeout exception needs to be exposed.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1879&quot;&gt;ISSUE-1879&lt;/a&gt;] -  GroupTransferService may be blocked by ResponseCallback in SYNC_MASTER mode.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1878&quot;&gt;ISSUE-1878&lt;/a&gt;] -  Add unit test about cleaning index file.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1859&quot;&gt;ISSUE-1859&lt;/a&gt;] -  Add codecov report for tests.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1807&quot;&gt;ISSUE-1807&lt;/a&gt;] -  Fix indexslotNum statistical error.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1689&quot;&gt;ISSUE-1689&lt;/a&gt;] -  StatsItem not remove after group or topic be removed.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1400&quot;&gt;ISSUE-1400&lt;/a&gt;] -  Disk space detection is blocked when it cost too much time to delete files.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/729&quot;&gt;ISSUE-729&lt;/a&gt;] -  Check ChannelHandlerContext whether is null.
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bug&quot;&gt;Bug&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1901&quot;&gt;ISSUE-1901&lt;/a&gt;] -  Create reply message fail because property[CLUSTER] is null.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/705&quot;&gt;ISSUE-705&lt;/a&gt;] -  WaitNotifyObject class has a wake up bug.
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;document-and-code-style-improvement&quot;&gt;Document and code style improvement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2054&quot;&gt;ISSUE-2054&lt;/a&gt;] -  Fix typo error in RocketMQ_Example.md. 
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2053&quot;&gt;ISSUE-2053&lt;/a&gt;] -  Add @Override for RMQOrderListener. 
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2035&quot;&gt;ISSUE-2035&lt;/a&gt;] -  Fix typo error in RequestResponseFuture. 
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2034&quot;&gt;ISSUE-2034&lt;/a&gt;] -  Correct the Java doc for MessageListenerOrderly.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2011&quot;&gt;ISSUE-2011&lt;/a&gt;] -  Add english README.md document.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2006&quot;&gt;ISSUE-2006&lt;/a&gt;] -  Add request-reply document.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1971&quot;&gt;ISSUE-1971&lt;/a&gt;] -  Polish ConsumerFilterManager comment.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1964&quot;&gt;ISSUE-1964&lt;/a&gt;] -  Fix document error about admin tool.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1883&quot;&gt;ISSUE-1883&lt;/a&gt;] -  Fix document error about WipeWritePermSubCommand.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1866&quot;&gt;ISSUE-1866&lt;/a&gt;] -  Fix document error about transaction message.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1857&quot;&gt;ISSUE-1857&lt;/a&gt;] -  Refactor the code in DefaultMQProducerImpl.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1741&quot;&gt;ISSUE-1741&lt;/a&gt;] -  Rename takeMessags to takeMessages.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1574&quot;&gt;ISSUE-1574&lt;/a&gt;] -  Fix spell mistake in request code.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1505&quot;&gt;ISSUE-1505&lt;/a&gt;] -  Fix the ListSplitter of batch sample in docs.
+&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/rmq-logo.png&quot;, &quot;bio&quot;=&gt;&quot;An open source distributed messaging and streaming data platform.&quot;, &quot;location&quot;=&gt;&quot;Hangzhou, China&quot;, &quot;email&quot;=&gt;&quot;dev@rocketmq.apache.org&quot;, &quot;uri&quot;=&gt;&quot;http://rocketmq.apache.org&quot;, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;apache/rocketmq&quot;, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;&quot;questions/tagged/rocketmq&quot;, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;&quot;ApacheRocketMQ&quot;, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil, &quot;quora&quot;=&gt;&quot;topic/RocketMQ&quot;}</name><email>dev@rocketmq.apache.org</email><uri>http://rocketmq.apache.org</uri></author><category term="Release_Notes" /><category term="RocketMQ" /><category term="Version" /><summary type="html">Below is a summary of the issues addressed in the 4.7.1 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to Quick Start.</summary></entry><entry><title type="html">Release Notes - Apache RocketMQ Client CPP- Version 2.2.0</title><link href="/release_notes/release-notes-rocketmq-client-cpp-2.2.0/" rel="alternate" type="text/html" title="Release Notes - Apache RocketMQ Client CPP- Version 2.2.0" /><published>2020-04-02T00:00:00+08:00</published><updated>2020-04-02T00:00:00+08:00</updated><id>/release_notes/release-notes-rocketmq-client-cpp-2.2.0</id><content type="html" xml:base="/release_notes/release-notes-rocketmq-client-cpp-2.2.0/">&lt;p&gt;Below is a summary of the issues addressed in the version 2.2.0 release of RocketMQ Client CPP. For full documentation of the release, a guide to get started, please refer to &lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp&quot;&gt;Quick Start&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2&gt; Download the 2.2.0 release&lt;/h2&gt;
 
@@ -114,8 +213,8 @@
 &lt;h2&gt; Download the 4.7.0 release&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Source: &lt;a href=&quot;https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.0/rocketmq-all-4.7.0-source-release.zip&quot;&gt;rocketmq-all-4.7.0-source-release.zip&lt;/a&gt; [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-source-release.zip.asc&quot;&gt;PGP&lt;/a&gt;] [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-source-release.zip.sha512&quot;&gt;SHA512&lt;/a&gt;]&lt;/li&gt;
-  &lt;li&gt;Binary: &lt;a href=&quot;https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.0/rocketmq-all-4.7.0-bin-release.zip&quot;&gt;rocketmq-all-4.7.0-bin-release.zip&lt;/a&gt; [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-bin-release.zip.asc&quot;&gt;PGP&lt;/a&gt;] [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-bin-release.zip.sha512&quot;&gt;SHA512&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Source: &lt;a href=&quot;https://archive.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-source-release.zip&quot;&gt;rocketmq-all-4.7.0-source-release.zip&lt;/a&gt; [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-source-release.zip.asc&quot;&gt;PGP&lt;/a&gt;] [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-source-release.zip.sha512&quot;&gt;SHA512&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Binary: &lt;a href=&quot;https://archive.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-bin-release.zip&quot;&gt;rocketmq-all-4.7.0-bin-release.zip&lt;/a&gt; [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-bin-release.zip.asc&quot;&gt;PGP&lt;/a&gt;] [&lt;a href=&quot;https://www.apache.org/dist/rocketmq/4.7.0/rocketmq-all-4.7.0-bin-release.zip.sha512&quot;&gt;SHA512&lt;/a&gt;]&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;new-feature&quot;&gt;New Feature&lt;/h2&gt;
@@ -397,41 +496,4 @@
 &lt;/li&gt;
 &lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1503&quot;&gt;ISSUE-1503&lt;/a&gt;] -  Fix some typo in docs/cn/design.md.
 &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/rmq-logo.png&quot;, &quot;bio&quot;=&gt;&quot;An open source distributed messaging and streaming data platform.&quot;, &quot;location&quot;=&gt;&quot;Hangzhou, China&quot;, &quot;email&quot;=&gt;&quot;dev@rocketmq.apache.org&quot;, &quot;uri&quot;=&gt;&quot;http://rocketmq.apache.org&quot;, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;apache/rocketmq&quot;, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;&quot;questions/tagged/rocketmq&quot;, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;&quot;ApacheRocketMQ&quot;, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil, &quot;quora&quot;=&gt;&quot;topic/RocketMQ&quot;}</name><email>dev@rocketmq.apache.org</email><uri>http://rocketmq.apache.org</uri></author><category term="Release_Notes" /><category term="RocketMQ" /><category term="Version" /><summary type="html">Below is a summary of the issues addressed in the 4.6.0 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to Quick Start.</summary></entry><entry><title type="html">Release Notes - Apache RocketMQ Client CPP- Version 1.2.4</title><link href="/release_notes/release-notes-rocketmq-client-cpp-1.2.4/" rel="alternate" type="text/html" title="Release Notes - Apache RocketMQ Client CPP- Version 1.2.4" /><published>2019-11-11T00:00:00+08:00</published><updated>2019-11-11T00:00:00+08:00</updated><id>/release_notes/release-notes-rocketmq-client-cpp-1.2.4</id><content type="html" xml:base="/release_notes/release-notes-rocketmq-client-cpp-1.2.4/">&lt;p&gt;Below is a summary of the issues addressed in the version 1.2.4 release of RocketMQ Client CPP. For full documentation of the release, a guide to get started, please refer to &lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp&quot;&gt;Quick Start&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2&gt; Download the 1.2.4 release&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Source: &lt;a href=&quot;https://archive.apache.org/dist/rocketmq/rocketmq/rocketmq-client-cpp/1.2.4/rocketmq-client-cpp-1.2.4-source-release.tar.gz&quot;&gt;rocketmq-client-cpp-1.2.4-source-release.tar.gz&lt;/a&gt; [&lt;a href=&quot;https://archive.apache.org/dist/rocketmq/rocketmq-client-cpp/1.2.4/rocketmq-client-cpp-1.2.4-source-release.tar.gz.asc&quot;&gt;PGP&lt;/a&gt;] [&lt;a href=&quot;https://archive.apache.org/dist/rocketmq/rocketmq-client-cpp/1.2.4/rocketmq-client-cpp-1.2.4-source-release.tar.gz.sha512&quot;&gt;SHA512&lt;/a&gt;]&lt;/li&gt;
-  &lt;li&gt;Binary: &lt;a href=&quot;https://archive.apache.org/dist/rocketmq/rocketmq-client-cpp/1.2.4/rocketmq-client-cpp-1.2.4-bin-release.tar.gz&quot;&gt;rocketmq-client-cpp-1.2.4-bin-release.tar.gz&lt;/a&gt; [&lt;a href=&quot;https://archive.apache.org/dist/rocketmq/rocketmq-client-cpp/1.2.4/rocketmq-client-cpp-1.2.4-bin-release.tar.gz.asc&quot;&gt;PGP&lt;/a&gt;] [&lt;a href=&quot;https://archive.apache.org/dist/rocketmq/rocketmq-client-cpp/1.2.4/rocketmq-client-cpp-1.2.4-bin-release.tar.gz.sha512&quot;&gt;SHA512&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;improvement&quot;&gt;Improvement&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/188&quot;&gt;ISSUE-188&lt;/a&gt;] -  feat(producer): add method for orderly message sending by shardingkey.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/190&quot;&gt;ISSUE-190&lt;/a&gt;] -  feat(consumer): add set max cache size for consumer c-style apis.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/193&quot;&gt;ISSUE-193&lt;/a&gt;] -  feat(producer): Support user data in async callback.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/199&quot;&gt;ISSUE-199&lt;/a&gt;] -  feat(transaction): add transaction message for C APIs.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/165&quot;&gt;ISSUE-165&lt;/a&gt;] -  optimize transport layer.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/171&quot;&gt;ISSUE-171&lt;/a&gt;] -  replace boost::thread::hardware_concurrency with std version.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/195&quot;&gt;ISSUE-195&lt;/a&gt;] -  style(example):format the code style in example.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/201&quot;&gt;ISSUE-201&lt;/a&gt;] -  feat(errorno): add new error no for transaction producer.
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bug&quot;&gt;Bug&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/178&quot;&gt;ISSUE-178&lt;/a&gt;] -  fixed typo bug in DefaultMQPushConsumer::getConsumerRunningInfo. 
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/183&quot;&gt;ISSUE-183&lt;/a&gt;] -  remove boost from StringIdMaker, and fixed some bugs.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq-client-cpp/pull/186&quot;&gt;ISSUE-186&lt;/a&gt;] -  fix: skip compressing if message is a batch one.
-&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/rmq-logo.png&quot;, &quot;bio&quot;=&gt;&quot;An open source distributed messaging and streaming data platform.&quot;, &quot;location&quot;=&gt;&quot;Hangzhou, China&quot;, &quot;email&quot;=&gt;&quot;dev@rocketmq.apache.org&quot;, &quot;uri&quot;=&gt;&quot;http://rocketmq.apache.org&quot;, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;apache/rocketmq&quot;, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;&quot;questions/tagged/rocketmq&quot;, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;&quot;ApacheRocketMQ&quot;, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil, &quot;quora&quot;=&gt;&quot;topic/RocketMQ&quot;}</name><email>dev@rocketmq.apache.org</email><uri>http://rocketmq.apache.org</uri></author><category term="Release_Notes" /><category term="RocketMQ" /><category term="Version" /><summary type="html">Below is a summary of the issues addressed in the version 1.2.4 release of RocketMQ Client CPP. For full documentation of the release, a guide to get started, please refer to Quick Start.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/rmq-logo.png&quot;, &quot;bio&quot;=&gt;&quot;An open source distributed messaging and streaming data platform.&quot;, &quot;location&quot;=&gt;&quot;Hangzhou, China&quot;, &quot;email&quot;=&gt;&quot;dev@rocketmq.apache.org&quot;, &quot;uri&quot;=&gt;&quot;http://rocketmq.apache.org&quot;, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;apache/rocketmq&quot;, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;&quot;questions/tagged/rocketmq&quot;, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;&quot;ApacheRocketMQ&quot;, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil, &quot;quora&quot;=&gt;&quot;topic/RocketMQ&quot;}</name><email>dev@rocketmq.apache.org</email><uri>http://rocketmq.apache.org</uri></author><category term="Release_Notes" /><category term="RocketMQ" /><category term="Version" /><summary type="html">Below is a summary of the issues addressed in the 4.6.0 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to Quick Start.</summary></entry></feed>
