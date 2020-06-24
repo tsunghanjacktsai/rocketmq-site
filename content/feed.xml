@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-06-17T11:08:21+08:00</updated><id>/feed.xml</id><title type="html">Apache RocketMQ</title><subtitle>The homepage of RocketMQ.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/rmq-logo.png&quot;, &quot;bio&quot;=&gt;&quot;An open source distributed messaging and streaming data platform.&quot;, &quot;location&quot;=&gt;&quot;Hangzhou, China&quot;, &quot;email&quot;=&gt;&quot;dev@rocketmq.apache.org&quot;, &quot;uri&quot;=&gt;&quot;http://rocketmq.apache.org&quot;, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;apache/rocketmq&quot;, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;&quot;questions/tagged/rocketmq&quot;, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;&quot;ApacheRocketMQ&quot;, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil, &quot;quora&quot;=&gt;&quot;topic/RocketMQ&quot;}</name><email>dev@rocketmq.apache.org</email><uri>http://rocketmq.apache.org</uri></author><entry><title type="html">Release Notes - Apache RocketMQ - Version 4.7.1</title><link href="/release_notes/release-notes-4.7.1/" rel="alternate" type="text/html" title="Release Notes - Apache RocketMQ - Version 4.7.1" /><published>2020-05-30T00:00:00+08:00</published><updated>2020-05-30T00:00:00+08:00</updated><id>/release_notes/release-notes-4.7.1</id><content type="html" xml:base="/release_notes/release-notes-4.7.1/">&lt;p&gt;Below is a summary of the issues addressed in the 4.7.1 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to &lt;a href=&quot;/docs/quick-start/&quot;&gt;Quick Start&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-06-24T15:24:49+08:00</updated><id>/feed.xml</id><title type="html">Apache RocketMQ</title><subtitle>The homepage of RocketMQ.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/rmq-logo.png&quot;, &quot;bio&quot;=&gt;&quot;An open source distributed messaging and streaming data platform.&quot;, &quot;location&quot;=&gt;&quot;Hangzhou, China&quot;, &quot;email&quot;=&gt;&quot;dev@rocketmq.apache.org&quot;, &quot;uri&quot;=&gt;&quot;http://rocketmq.apache.org&quot;, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;apache/rocketmq&quot;, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;&quot;questions/tagged/rocketmq&quot;, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;&quot;ApacheRocketMQ&quot;, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil, &quot;quora&quot;=&gt;&quot;topic/RocketMQ&quot;}</name><email>dev@rocketmq.apache.org</email><uri>http://rocketmq.apache.org</uri></author><entry><title type="html">Release Notes - Apache RocketMQ - Version 4.7.1</title><link href="/release_notes/release-notes-4.7.1/" rel="alternate" type="text/html" title="Release Notes - Apache RocketMQ - Version 4.7.1" /><published>2020-05-30T00:00:00+08:00</published><updated>2020-05-30T00:00:00+08:00</updated><id>/release_notes/release-notes-4.7.1</id><content type="html" xml:base="/release_notes/release-notes-4.7.1/">&lt;p&gt;Below is a summary of the issues addressed in the 4.7.1 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to &lt;a href=&quot;/docs/quick-start/&quot;&gt;Quick Start&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2&gt; Download the 4.7.1 release&lt;/h2&gt;
 
@@ -9,51 +9,61 @@
 
 &lt;h2 id=&quot;improvement&quot;&gt;Improvement&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2088&quot;&gt;ISSUE-2088&lt;/a&gt;] -  Optimize RocketMQ client's stats of RT to make sense.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2085&quot;&gt;ISSUE-2085&lt;/a&gt;] -  Support graceful shutdown for push consumer.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2082&quot;&gt;ISSUE-2082&lt;/a&gt;] -  Use StringBuilder instead of StringBuffer.
+&lt;/li&gt;
 &lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2065&quot;&gt;ISSUE-2065&lt;/a&gt;] -  Upgrade fastjson version to prevent RCE problem.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2044&quot;&gt;ISSUE-2044&lt;/a&gt;] -  Fix the issue that DefaultLitePullConsumerImpl may throw null pointer exception.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2042&quot;&gt;ISSUE-2042&lt;/a&gt;] -  Fix the issue that client still connect to the old name server even it is removed from namesrvAddr list.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2036&quot;&gt;ISSUE-2036&lt;/a&gt;] -  Fix the issue that encode null value caused incorrect encoding result.
 &lt;/li&gt;
 &lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2007&quot;&gt;ISSUE-2007&lt;/a&gt;] -  Upgrade fastjson version to prevent serious security problem.
 &lt;/li&gt;
 &lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1992&quot;&gt;ISSUE-1992&lt;/a&gt;] -  Optimize the log output in Broker2Client class.
 &lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1988&quot;&gt;ISSUE-1988&lt;/a&gt;] -  Fix the issue that update messageDelay property incorrectly with updateBrokerConfig command.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1978&quot;&gt;ISSUE-1978&lt;/a&gt;] -  Fix the issue that getBornHostString method may throw null pointer exception.
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1988&quot;&gt;ISSUE-1988&lt;/a&gt;] -  Update messageDelay property incorrectly with updateBrokerConfig command.
 &lt;/li&gt;
 &lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1976&quot;&gt;ISSUE-1976&lt;/a&gt;] -  Improve the security of the system topic operation.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1950&quot;&gt;ISSUE-1950&lt;/a&gt;] -  Fix the issue that residual threads still exist after producer calls shutdown.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1931&quot;&gt;ISSUE-1931&lt;/a&gt;] -  Fix the issue that doAfterRpcHooks is called twice in processRequestCommand method.
 &lt;/li&gt;
 &lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1912&quot;&gt;ISSUE-1912&lt;/a&gt;] -  Polish the consumer offset commit logic for lite pull consumer.
 &lt;/li&gt;
 &lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1895&quot;&gt;ISSUE-1895&lt;/a&gt;] -  Expose the flush disk timeout error to user when sending messages.
 &lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1879&quot;&gt;ISSUE-1879&lt;/a&gt;] -  Fix the issue that GroupTransferService may be blocked by ResponseCallback in SYNC_MASTER mode.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1807&quot;&gt;ISSUE-1807&lt;/a&gt;] -  Fix statistical error about hashSlotCount in index file.
-&lt;/li&gt;
 &lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1689&quot;&gt;ISSUE-1689&lt;/a&gt;] -  Add interfaces to remove unused statsItem in BrokerStatsManager class.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1400&quot;&gt;ISSUE-1400&lt;/a&gt;] -  Fix the issue that disk space detection may be blocked when deleting a lot of files.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/729&quot;&gt;ISSUE-729&lt;/a&gt;] -  Fix the issue that wipeWritePermOfBroker method may throw null pointer exception.
-&lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/705&quot;&gt;ISSUE-705&lt;/a&gt;] -  Fix the issue the content of waitingThreadTable is not updated in time.
 &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;bug&quot;&gt;Bug&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1901&quot;&gt;ISSUE-1901&lt;/a&gt;] -  Fix the bug that create reply message fail when using request/reply mode.
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2118&quot;&gt;ISSUE-2118&lt;/a&gt;] -  Fix AdminBrokerProcessorTest can not pass when machine's hostname contains illegal characters.
 &lt;/li&gt;
-&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1906&quot;&gt;ISSUE-1906&lt;/a&gt;] -  Fix the issue that BooleanConstantExpression might lead to class loading deadlock.
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2078&quot;&gt;ISSUE-2078&lt;/a&gt;] -  HmacSHA1 not available when use openjdk.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1901&quot;&gt;ISSUE-1901&lt;/a&gt;] -  Create reply message fail when using request/reply mode.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1906&quot;&gt;ISSUE-1906&lt;/a&gt;] -  BooleanConstantExpression might lead to class loading deadlock.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2044&quot;&gt;ISSUE-2044&lt;/a&gt;] -  DefaultLitePullConsumerImpl may throw null pointer exception.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2042&quot;&gt;ISSUE-2042&lt;/a&gt;] -  Client still connect to the old name server even it is removed from namesrvAddr list.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/2036&quot;&gt;ISSUE-2036&lt;/a&gt;] -  Encode null value caused incorrect encoding result.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1978&quot;&gt;ISSUE-1978&lt;/a&gt;] -  The getBornHostString method may throw null pointer exception.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1950&quot;&gt;ISSUE-1950&lt;/a&gt;] -  Residual threads still exist after producer calls shutdown.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1931&quot;&gt;ISSUE-1931&lt;/a&gt;] -  The doAfterRpcHooks method is called twice in processRequestCommand method.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1879&quot;&gt;ISSUE-1879&lt;/a&gt;] -  GroupTransferService may be blocked by ResponseCallback in SYNC_MASTER mode.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1400&quot;&gt;ISSUE-1400&lt;/a&gt;] -  Disk space detection may be blocked when deleting a lot of files.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/729&quot;&gt;ISSUE-729&lt;/a&gt;] -  The wipeWritePermOfBroker method may throw null pointer exception.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/705&quot;&gt;ISSUE-705&lt;/a&gt;] -  The content of waitingThreadTable is not updated in time.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://github.com/apache/rocketmq/issues/1807&quot;&gt;ISSUE-1807&lt;/a&gt;] -  Fix statistical error about hashSlotCount in index file.
 &lt;/li&gt;
 &lt;/ul&gt;
 
