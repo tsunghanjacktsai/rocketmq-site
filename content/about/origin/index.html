@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Origin - Apache RocketMQ</title>
+
+
+
+
+<meta name="description" content="RocketMQ history.">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Apache RocketMQ">
+<meta property="og:title" content="Origin">
+
+
+
+
+  <meta property="og:description" content="RocketMQ history.">
+
+
+
+  <meta name="twitter:site" content="@ApacheRocketMQ">
+  <meta name="twitter:title" content="Origin">
+  <meta name="twitter:description" content="RocketMQ history.">
+  <meta name="twitter:url" content="">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Apache RocketMQ",
+      "url" : null,
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="aand0XZkSGsziuC-UPD4ZJniFD0m0JhGx6820y2mAQY" />
+
+
+  <meta name="baidu-site-verification" content="wD06EbDRkQ" />
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Apache RocketMQ Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">Apache RocketMQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/docs/quick-start/">Documentation</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/year-archive/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/community/">Community</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/users/">Users</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/about/origin/"><span class="nav__sub-title">Origin</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/about/team/"><span class="nav__sub-title">Team</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/about/contact/"><span class="nav__sub-title">Contact</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/about/rewards/"><span class="nav__sub-title">Rewards</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Origin">
+    <meta itemprop="description" content="RocketMQ history.">
+    
+    <meta itemprop="dateModified" content="June 13, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Origin
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <h3 id="origin">Origin</h3>
+
+<p>RocketMQ, a distributed messaging middleware developed by Alibaba in 2012,  was designed for message handling on a trillion scale, featuring high throughput, low latency, massive accumulation, and ordered message. It is a readily accessible tool for Double Eleven shopping spree in Alibaba and numerous large-scale Internet business scenarios alike. Thanks to these advantages, it has attracted more and more applications for access. Also in the same year, Alibaba officially open sourced the first version of RocketMQ.</p>
+
+<p>In 2015, RocketMQ has witnessed a number of heavyweight features for messaging, including transaction messages, SQL filter, message retroactive, scheduled messages, and multi-site high availability, etc., to meet Alibaba’s increasingly rich business scenarios. It has also replaced Notify, another Alibaba self-developed MQ product，and become a preferred messaging middleware in Alibaba. And in 2016, RocketMQ developed the first fully-managed service on Alibaba Cloud, helping a large number of digitally transformed enterprises build modern applications, and began to experience large-scale cloud computing practices. In the same year, RocketMQ was donated to the Apache Foundation and enlisted in Incubator Project, aiming to serve more developers in the future.</p>
+
+<p>After graduation from Apache Foundation in 2017, RocketMQ was designated as Top-Level Project(TLP).</p>
+
+<p>From birth to maturity, and finally being an Apache TLP, the success of RocketMQ is inseparable from the efforts of its founding teams and numerous developers for years.</p>
+
+<h3 id="cofounders">Cofounders</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Image</th>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Apache Id</th>
+      <th style="text-align: left">Github Id</th>
+      <th style="text-align: left">When</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/vintagewang.jpeg" alt="vintagewang" /></td>
+      <td style="text-align: left">Xiaorui Wang</td>
+      <td style="text-align: left">vintagewang</td>
+      <td style="text-align: left"><a href="https://github.com/vintagewang">@vintagewang</a></td>
+      <td style="text-align: left">Create RocketMQ in 2012</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/linqingshan.png" alt="linhill" /></td>
+      <td style="text-align: left">Qingshan Lin</td>
+      <td style="text-align: left">linhill</td>
+      <td style="text-align: left"><a href="https://github.com/hill007299">@hill007299</a></td>
+      <td style="text-align: left">Since @2013</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/manhong.png" alt="manhong" /></td>
+      <td style="text-align: left">Qiudi Yang</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://github.com/YangJodie">@jodie.yang</a></td>
+      <td style="text-align: left">Since @2013</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/fuchong.png" alt="fuchong" /></td>
+      <td style="text-align: left">Yubao Fu</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://github.com/fuyou001">@fuyou001</a></td>
+      <td style="text-align: left">Since @2013</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/lollipop.jpeg" alt="lollipop" /></td>
+      <td style="text-align: left">Jixiang Jin</td>
+      <td style="text-align: left">lollipop</td>
+      <td style="text-align: left"><a href="https://github.com/lollipopjin">@lollipopjin</a></td>
+      <td style="text-align: left">Since @2014</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/buming.png" alt="buming" /></td>
+      <td style="text-align: left">Li Zhou</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://github.com/zhouli11">@zhouli11</a></td>
+      <td style="text-align: left">Since @2014</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/mingduan.png" alt="mingduan" /></td>
+      <td style="text-align: left">Zhongliang Chen</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://github.com/chenzlalvin">@chenzlalvin</a></td>
+      <td style="text-align: left">Since @2015</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/zhouxinyu.png" alt="zhouxinyu" /></td>
+      <td style="text-align: left">Xinyu Zhou</td>
+      <td style="text-align: left">yukon</td>
+      <td style="text-align: left"><a href="https://github.com/zhouxinyu">@zhouxinyu</a></td>
+      <td style="text-align: left">Since @2016</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/gongyi.png" alt="fuchong" /></td>
+      <td style="text-align: left">Meiping Zhang</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://github.com/gongyi-zmp">@gongyi-zmp</a></td>
+      <td style="text-align: left">Since @2016</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="/assets/images/about/dongeforever.jpeg" alt="dongeforever" /></td>
+      <td style="text-align: left">ZhenDong Liu</td>
+      <td style="text-align: left">dongeforever</td>
+      <td style="text-align: left"><a href="https://github.com/dongeforever">@dongeforever</a></td>
+      <td style="text-align: left">Since @2016</td>
+    </tr>
+  </tbody>
+</table>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-06-13">June 13, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=ApacheRocketMQ&text=Origin /about/origin/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=/about/origin/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=/about/origin/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=/about/origin/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/about/rewards/" class="pagination--pager" title="REWARDS
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <style type="text/css">
+  div.columns   { float: left; margin-left: 10px;}
+  div.clear     { clear: both; } 
+</style>
+<div>
+  <div class="columns">
+    <a href="https://www.apache.org/"><img src="/assets/images/feather-small.gif" alt="Apache Software Foundation" style="height: 88px !important" /></a>
+  </div>
+  <div class="columns" style="width: 80%">
+    <div class="page__footer-follow">
+      <ul class="social-icons">
+        
+          <li><strong>Follow:</strong></li>
+        
+        
+          <li><a href="https://twitter.com/ApacheRocketMQ"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+        
+        
+          <li><a href="https://github.com/apache/rocketmq"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+        
+        <li><a href="/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      </ul>
+    </div>
+
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
+    <br>
+    <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>
+    <br>
+	<div>
+      <a  href="https://www.apache.org/events/current-event.html">
+        <img src="https://www.apache.org/events/current-event-234x60.png" />
+      </a>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89603173-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?36428f2b841d08e7405724cbf7f860d2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+  </body>
+</html>

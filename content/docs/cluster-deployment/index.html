@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -524,8 +524,8 @@
 <h1 id="deployment-example">Deployment Example</h1>
 
 <p>For example, We want to have a cluster with 2 name servers, 2 broker sets with general purpose:
-for this example, we choose <code class="highlighter-rouge">2m-2s-sync</code>
-Assuming binary RocketMQ is at <code class="highlighter-rouge">/home/rocketmq/dist</code></p>
+for this example, we choose <code class="language-plaintext highlighter-rouge">2m-2s-sync</code>
+Assuming binary RocketMQ is at <code class="language-plaintext highlighter-rouge">/home/rocketmq/dist</code></p>
 
 <ol>
   <li>
@@ -534,22 +534,22 @@ Assuming binary RocketMQ is at <code class="highlighter-rouge">/home/rocketmq/di
   <li>
     <p>Start brokers</p>
 
-    <p><code class="highlighter-rouge">cd /home/rocketmq/dist/bin</code></p>
+    <p><code class="language-plaintext highlighter-rouge">cd /home/rocketmq/dist/bin</code></p>
 
-    <p><code class="highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-a.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-a.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
 
-    <p><code class="highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-a-s.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-a-s.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
 
-    <p><code class="highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-b.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-b.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
 
-    <p><code class="highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-b-s.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-b-s.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
   </li>
   <li>
     <p>Verify</p>
 
     <p>Execute the following command to verify</p>
 
-    <p><code class="highlighter-rouge">bash mqadmin clusterList</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqadmin clusterList</code></p>
   </li>
 </ol>
 
@@ -641,7 +641,7 @@ Assuming binary RocketMQ is at <code class="highlighter-rouge">/home/rocketmq/di
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

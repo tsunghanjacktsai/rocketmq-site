@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -488,7 +488,7 @@ In Apache RocketMQ, this can be done in four ways.</p>
 
 <h2 id="programmatic-way">Programmatic Way</h2>
 
-<p>For brokers, we can specify <code class="highlighter-rouge">namesrvAddr=name-server-ip1:port;name-server-ip2:port</code> in broker configuration file.</p>
+<p>For brokers, we can specify <code class="language-plaintext highlighter-rouge">namesrvAddr=name-server-ip1:port;name-server-ip2:port</code> in broker configuration file.</p>
 
 <p>For producers and consumers, we can feed name server address list to them as follows:</p>
 
@@ -505,7 +505,7 @@ In Apache RocketMQ, this can be done in four ways.</p>
 </code></pre></div></div>
 
 <p>A simple example is:
-<code class="highlighter-rouge">sh mqadmin -n localhost:9876 clusterList</code>
+<code class="language-plaintext highlighter-rouge">sh mqadmin -n localhost:9876 clusterList</code>
 assuming to query cluster info on the name server node.</p>
 
 <p>If you have integrated admin tool into your own dashboard, you can:</p>
@@ -517,11 +517,11 @@ assuming to query cluster info on the name server node.</p>
 <h2 id="java-options">Java Options</h2>
 
 <p>Name server address list may also be fed to your application through specifying the sequel java option 
-<code class="highlighter-rouge">rocketmq.namesrv.addr</code> before launching.</p>
+<code class="language-plaintext highlighter-rouge">rocketmq.namesrv.addr</code> before launching.</p>
 
 <h2 id="environment-variable">Environment Variable</h2>
 
-<p>You can export <code class="highlighter-rouge">NAMESRV_ADDR</code> environment variable. Brokers and clients will examine and use its value if set.</p>
+<p>You can export <code class="language-plaintext highlighter-rouge">NAMESRV_ADDR</code> environment variable. Brokers and clients will examine and use its value if set.</p>
 
 <h2 id="http-endpoint">HTTP Endpoint</h2>
 
@@ -531,10 +531,10 @@ assuming to query cluster info on the name server node.</p>
 
 <p>By default, the end point is:</p>
 
-<p><code class="highlighter-rouge">http://jmenv.tbsite.net:8080/rocketmq/nsaddr</code></p>
+<p><code class="language-plaintext highlighter-rouge">http://jmenv.tbsite.net:8080/rocketmq/nsaddr</code></p>
 
-<p>You may override <code class="highlighter-rouge">jmenv.tbsite.net</code> using this Java option: <code class="highlighter-rouge">rocketmq.namesrv.domain</code>,
-You may also override <code class="highlighter-rouge">nsaddr</code> part using this Java option: <code class="highlighter-rouge">rocketmq.namesrv.domain.subgroup</code></p>
+<p>You may override <code class="language-plaintext highlighter-rouge">jmenv.tbsite.net</code> using this Java option: <code class="language-plaintext highlighter-rouge">rocketmq.namesrv.domain</code>,
+You may also override <code class="language-plaintext highlighter-rouge">nsaddr</code> part using this Java option: <code class="language-plaintext highlighter-rouge">rocketmq.namesrv.domain.subgroup</code></p>
 
 <p>If you are running Apache RocketMQ in production, this method is recommended because it gives you maximum flexibility
  – you can dynamically add or remove name server nodes without necessity of rebooting your brokers and clients 
@@ -543,7 +543,7 @@ You may also override <code class="highlighter-rouge">nsaddr</code> part using t
 <h2 id="priority">Priority</h2>
 
 <p>Methods introduced first take precedence over the latter ones: <br />
-<code class="highlighter-rouge">Programmatic Way &gt; Java Options &gt; Environment Variable &gt; HTTP Endpoint</code></p>
+<code class="language-plaintext highlighter-rouge">Programmatic Way &gt; Java Options &gt; Environment Variable &gt; HTTP Endpoint</code></p>
 
 
         
@@ -634,7 +634,7 @@ You may also override <code class="highlighter-rouge">nsaddr</code> part using t
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

@@ -24,15 +24,15 @@ More Details:
 
 # Download & Build from Release
 
-Click [here](https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.1/rocketmq-all-4.7.1-source-release.zip) to download the 4.7.1 source release. Also you could download a binary release from [here](https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.1/rocketmq-all-4.7.1-bin-release.zip).
+Click [here](https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.9.4/rocketmq-all-4.9.4-source-release.zip) to download the 4.9.4 source release. Also you could download a binary release from [here](https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.9.4/rocketmq-all-4.9.4-bin-release.zip).
 
-Now execute the following commands to unpack 4.7.1 source release and build the binary artifact.
+Now execute the following commands to unpack 4.9.4 source release and build the binary artifact.
 
 ```shell
-  > unzip rocketmq-all-4.7.1-source-release.zip
-  > cd rocketmq-all-4.7.1/
+  > unzip rocketmq-all-4.9.4-source-release.zip
+  > cd rocketmq-all-4.9.4-source-release/
   > mvn -Prelease-all -DskipTests clean install -U
-  > cd distribution/target/rocketmq-4.7.1/rocketmq-4.7.1
+  > cd distribution/target/rocketmq-4.9.4/rocketmq-4.9.4
 ```
 # Linux 
  
@@ -131,7 +131,7 @@ Open new powershell window, after set the correct environment variable. then cha
 Open new powershell window, after set the correct environment variable. then change directory to rocketmq type and run:
 
 ```bash
-.\bin\tool.cmd  org.apache.rocketmq.example.quickstart.Producer
+.\bin\tools.cmd  org.apache.rocketmq.example.quickstart.Producer
 ```
 ### Receive Messages
 
@@ -141,7 +141,7 @@ Open new powershell window, after set the correct environment variable. then cha
 
 
 ```bash
-.\bin\tool.cmd  org.apache.rocketmq.example.quickstart.Consumer
+.\bin\tools.cmd  org.apache.rocketmq.example.quickstart.Consumer
 ```
 
 ## Shutdown Servers

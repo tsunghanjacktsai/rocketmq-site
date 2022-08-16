@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Release Notes - Apache RocketMQ Client Go- Version 2.1.1 - Apache RocketMQ</title>
+
+
+
+
+<meta name="description" content="Below is a summary of the issues addressed in the version 2.1.1 release of RocketMQ Client Go. For full documentation of the release, a guide to get started, please refer to Quick Start.">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Apache RocketMQ">
+<meta property="og:title" content="Release Notes - Apache RocketMQ Client Go- Version 2.1.1">
+
+
+
+
+  <meta property="og:description" content="Below is a summary of the issues addressed in the version 2.1.1 release of RocketMQ Client Go. For full documentation of the release, a guide to get started, please refer to Quick Start.">
+
+
+
+  <meta name="twitter:site" content="@ApacheRocketMQ">
+  <meta name="twitter:title" content="Release Notes - Apache RocketMQ Client Go- Version 2.1.1">
+  <meta name="twitter:description" content="Below is a summary of the issues addressed in the version 2.1.1 release of RocketMQ Client Go. For full documentation of the release, a guide to get started, please refer to Quick Start.">
+  <meta name="twitter:url" content="">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2022-07-25T00:00:00+00:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Apache RocketMQ",
+      "url" : null,
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="aand0XZkSGsziuC-UPD4ZJniFD0m0JhGx6820y2mAQY" />
+
+
+  <meta name="baidu-site-verification" content="wD06EbDRkQ" />
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Apache RocketMQ Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">Apache RocketMQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/docs/quick-start/">Documentation</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/year-archive/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/community/">Community</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/users/">Users</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/rmq-logo.png" class="author__avatar" alt="" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name"></h3>
+    
+      <p class="author__bio" itemprop="description">
+        An open source distributed messaging and streaming data platform.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">Hangzhou, China</span>
+        </li>
+      
+
+      
+        <li>
+          <a href="http://rocketmq.apache.org" itemprop="url">
+            <i class="fa fa-fw fa-chain" aria-hidden="true"></i> Website
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="mailto:dev@rocketmq.apache.org">
+            <meta itemprop="email" content="dev@rocketmq.apache.org" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/ApacheRocketMQ" itemprop="sameAs">
+            <i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/apache/rocketmq" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://www.stackoverflow.com/questions/tagged/rocketmq" itemprop="sameAs">
+            <i class="fa fa-fw fa-stack-overflow" aria-hidden="true"></i> Stackoverflow
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://www.quora.com/topic/RocketMQ" itemprop="sameAs">
+            <i class="fa fa-fw" aria-hidden="true"><strong>Q</strong></i> Quora
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Release Notes - Apache RocketMQ Client Go- Version 2.1.1">
+    <meta itemprop="description" content="Below is a summary of the issues addressed in the version 2.1.1 release of RocketMQ Client Go. For full documentation of the release, a guide to get started, please refer to Quick Start.">
+    <meta itemprop="datePublished" content="July 25, 2022">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Release Notes - Apache RocketMQ Client Go- Version 2.1.1
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>Below is a summary of the issues addressed in the version 2.1.1 release of RocketMQ Client Go. For full documentation of the release, a guide to get started, please refer to <a href="https://github.com/apache/rocketmq-client-go">Quick Start</a>.</p>
+
+<h2> Download the 2.1.1 release</h2>
+
+<ul>
+  <li>Source: <a href="https://www.apache.org/dyn/closer.cgi?path=rocketmq/rocketmq-client-go/2.1.1/rocketmq-client-go-2.1.1-source-release.tar.gz">rocketmq-client-go-2.1.1-source-release.tar.gz</a> [<a href="https://www.apache.org/dist/rocketmq/rocketmq-client-go/2.1.1/rocketmq-client-go-2.1.1-source-release.tar.gz.asc">PGP</a>] [<a href="https://www.apache.org/dist/rocketmq/rocketmq-client-go/2.1.1/rocketmq-client-go-2.1.1-source-release.tar.gz.sha512">SHA512</a>]</li>
+</ul>
+
+<h2 id="whats-changed">What’s Changed</h2>
+<ul>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/645">[ISSUE #644]</a> Fix the zlibWriterPools doesn’t work leads to high memory usage.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/639">[ISSUE #640]</a> fix PullInterval unit.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/643">[ISSUE #643]</a> fix crash on selecting queue.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/636">[ISSUE #635]</a> Improving decoding performance for remoting commands.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/665">[ISSUE #662]</a> Fix the usage bug of namespace.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/652">[ISSUE #651]</a> fix an issue where a map read operation was not protected by the lock.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/677">[ISSUE #678]</a> optimizing goroutine of Stat creation.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/680">[ISSUE #680]</a> wrap topic with namespace when unsubscribe.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/586">[ISSUE #585]</a> Fix the wrong StoreHost and GroupName with consume trace message.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/642">[ISSUE #614]</a> Fix go routine leaks when consumer close with msg channel blocked.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/689">[ISSUE #694]</a> Fix typos.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/684">[ISSUE #683]</a> request parameter type error fix.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/641">[ISSUE #695]</a> Feat: support IPV6.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/632">[ISSUE #631]</a> Support Consuming from Slave.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/697">[ISSUE #688]</a> fix: type assert panic.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/691">[ISSUE #698]</a> fix: call cancel() as soon as possible to release the resources associatd with context.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/700">[ISSUE #637]</a> Fix filter lookback interface for utils.ClientIP.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/660">[ISSUE #659]</a> make consumeMessageBatchMaxSize default value consistent with java client.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/702">[ISSUE #701]</a> Fix  timeout of SendAsync.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/704">[ISSUE #704]</a> add missing log level fatal.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/682">[ISSUE #681]</a> feat(internal): support reset consumer offset.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/709">[ISSUE #710]</a> Fix send duplicate message in trace interceptor.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/706">[ISSUE #595]</a> Update go.mod.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/714">[ISSUE #699]</a> Fix the bug caused by master broker node is down.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/712">[ISSUE #712]</a> fix push_consumer#unsubscribe unsubscribe retry.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/717">[ISSUE #716]</a> Fix the bug caused in HA cluster in pull_consumer.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/720">[ISSUE #720]</a> set subversion when buildSubscriptionData.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/723">[ISSUE #722]</a> fix the bug caused by failover in consumer.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/708">[ISSUE #735]</a> centralized management errors.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/732">[ISSUE #731]</a> Optimize the update offset logic.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/693">[ISSUE #650]</a> fix: correctly mark messages to be reconsumed.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/743">[ISSUE #744]</a> check multiple topics in one batch.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/753">[ISSUE #752]</a> change argument to pointer-like to avoid allocations.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/758">[ISSUE #757]</a> Fix GetHeader type conflict.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/756">[ISSUE #726]</a> feat: replace fmt to rlog.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/765">[ISSUE #759]</a> Change ResetOffsetBody response parse method to support fastjson schema.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/775">[ISSUE #775]</a> update gjson for security problem.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/779">[ISSUE #778]</a> Build instance name with nanosecond.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/788">[ISSUE #788]</a> Refactor the client instance struct，converge the namesrv module.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/805">[ISSUE #806]</a> Fix the feature that GetNamesrv.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/808">[ISSUE #807]</a> fix code style.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/816">[ISSUE #816]</a> fix long time block when remote endpoint crash.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/679">[ISSUE #818]</a> fix msg.Body compressed cause error in transaction message processing.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/824">[ISSUE #824]</a> fix queueMaxSpanFlowControlTimes not change.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/829">[ISSUE #828]</a> Support rlog rotate.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/826">[ISSUE #827]</a> Support get consumerRunningInfo return goroutine stack.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/825">[ISSUE #825]</a> fix some params for consumer can not be changed.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/809">[ISSUE #810]</a> fix async producer example.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/803">[ISSUE #803]</a> Feat/rpc request.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/833">[ISSUE #832]</a> Client may submit wrong offset when network instability.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/841">[ISSUE #823]</a> fix: panic problem caused by json-iterator in go1.18.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/773">[ISSUE #773]</a> fix(sendOneWay): fix stack overflow caused by recursive calls.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/852">[ISSUE #852]</a> bugfix rebalance is not paused after suspend and rebalance not trigge.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/858">[ISSUE #858]</a> feat: exchange messages_utils dir.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/857">[ISSUE #857]</a> selectMessageQueue nil *internal.TopicPublishInfo.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/856">[ISSUE #774]</a> Avoid cancel context too early cause trace data fail.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/629">[ISSUE #628]</a> takeMessages sleep max 5s.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/820">[ISSUE #819]</a> Fix sis.samplingInSeconds and sis.printAtMinutes() running in different goroutines cause DATA RACE.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/783">[ISSUE #783]</a> Maybe can remove some useless code in encodeBatch().</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/837">[ISSUE #847]</a> fix primitive.WithMethod ctx transfer.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/834">[ISSUE #840]</a> consumer consume include tag according to accumulation.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/812">[ISSUE #813]</a> Fix bug when get <code class="language-plaintext highlighter-rouge">mqadmin consumerStatus</code> can’t get consume status.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/851">[ISSUE #851]</a> compare slice length directly.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/814">[ISSUE #814]</a> fix pullThresholdSizeForTopic invalid.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/849">[ISSUE #849]</a> add some methods for pushConsumer.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/844">[ISSUE #843]</a> fix request offset will not be changed in some case.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/854">[ISSUE #854]</a> a little improvement use chan instead.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/860">[ISSUE #797]</a> Fix msg lost if consumer crash when send msg back failed.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/859">[ISSUE #754]</a> close msgCh when pq dropped.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/865">[ISSUE #780]</a> avoid sendmessage back with origin message body in request.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/729">[ISSUE #728]</a> client shutdown abnormally.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/868">[ISSUE #864]</a> update rlog to 1.9.0 to fix CVE-2022-29526 in golang.org/x/sys.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/867">[ISSUE #869]</a> Fix: Consumer api comments.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/866">[ISSUE #790]</a> use uber atomic lib to avoid atomic value data race.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/871">[ISSUE #870]</a> add license header for some new files.</li>
+  <li><a href="https://github.com/apache/rocketmq-client-go/pull/873">[ISSUE #872]</a> fix code coverage shell error in travis ci yml.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#release-notes" class="page__taxonomy-item" rel="tag">Release_Notes</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rocketmq" class="page__taxonomy-item" rel="tag">RocketMQ</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#version" class="page__taxonomy-item" rel="tag">Version</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#release-notes" class="page__taxonomy-item" rel="tag">Release_Notes</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-07-25T00:00:00+00:00">July 25, 2022</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=ApacheRocketMQ&text=Release Notes - Apache RocketMQ Client Go- Version 2.1.1 /release_notes/release-notes-rocketmq-client-go-2.1.1/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=/release_notes/release-notes-rocketmq-client-go-2.1.1/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=/release_notes/release-notes-rocketmq-client-go-2.1.1/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=/release_notes/release-notes-rocketmq-client-go-2.1.1/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/release_notes/release-notes-4.9.4/" class="pagination--pager" title="Release Notes - Apache RocketMQ - Version 4.9.4
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+    <h4 class="page__comments-title">Leave a Comment</h4>
+    <section id="disqus_thread"></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/release_notes/release-notes-4.9.4/" rel="permalink">Release Notes - Apache RocketMQ - Version 4.9.4
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the 4.9.4 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to Q...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/release_notes/release-notes-rocketmq-streams-1.0.1-preview/" rel="permalink">Release Notes - Apache RocketMQ Streams - Version 1.0.1-preview
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the 1.0.1-preview release of RocketMQ Streams. For full documentation of the release, a guide to get started, p...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/release_notes/release-notes-rocketmq-spring-2.2.2/" rel="permalink">Release Notes - Apache RocketMQ Spring - Version 2.2.2
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the version 2.2.2 release of RocketMQ Spring. For full documentation of the release, a guide to get started, pl...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/release_notes/release-notes-5.0.0-ALPHA/" rel="permalink">Release Notes - Apache RocketMQ - Version 5.0.0-ALPHA
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the 5.0.0-ALPHA release of RocketMQ. For full documentation of the release, a guide to get started, please refe...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <style type="text/css">
+  div.columns   { float: left; margin-left: 10px;}
+  div.clear     { clear: both; } 
+</style>
+<div>
+  <div class="columns">
+    <a href="https://www.apache.org/"><img src="/assets/images/feather-small.gif" alt="Apache Software Foundation" style="height: 88px !important" /></a>
+  </div>
+  <div class="columns" style="width: 80%">
+    <div class="page__footer-follow">
+      <ul class="social-icons">
+        
+          <li><strong>Follow:</strong></li>
+        
+        
+          <li><a href="https://twitter.com/ApacheRocketMQ"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+        
+        
+          <li><a href="https://github.com/apache/rocketmq"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+        
+        <li><a href="/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      </ul>
+    </div>
+
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
+    <br>
+    <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>
+    <br>
+	<div>
+      <a  href="https://www.apache.org/events/current-event.html">
+        <img src="https://www.apache.org/events/current-event-234x60.png" />
+      </a>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89603173-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?36428f2b841d08e7405724cbf7f860d2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+  	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  	var disqus_shortname = 'rocketmq';
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function() {
+  		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  	})();
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function () {
+  		var s = document.createElement('script'); s.async = true;
+  		s.type = 'text/javascript';
+  		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  	}());
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+  </body>
+</html>

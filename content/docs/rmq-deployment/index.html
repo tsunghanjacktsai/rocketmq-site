@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -495,7 +495,7 @@
 <p>This section introduces production-ready deployment solution. Generally speaking, we are deploying a resilient RocketMQ cluster having no single point of failure.</p>
 
 <h3 id="prerequisite">Prerequisite</h3>
-<p>Before starting this section, make sure you have read Quick Start section, and are farmiliar with the core concepts and components of RocketMQ.</p>
+<p>Before starting this section, make sure you have read Quick Start section, and are familiar with the core concepts and components of RocketMQ.</p>
 
 <h4 id="production-ready-deployment">Production-ready Deployment</h4>
 <h5 id="name-server">Name Server</h5>
@@ -506,7 +506,7 @@
 <h4 id="broker">Broker</h4>
 <p>Brokers can be divided into two categories according to their roles: master and slave. Master brokers provide RW access while slave brokers only accept read access.</p>
 
-<p>To deploy a high-availability RocketMQ cluster with no single point of failure, a series of broker sets should be deployed. A broker set contains one master with brokerId set to 0 and several slaves with non-zero brokerIDs. All of the brokers in one set have the same brokerName. In serious scenarios, we should have at least two brokers in one broker set. Each topic resides in two or more brokers.</p>
+<p>To deploy a high-availability RocketMQ cluster with no single point of failure, a series of broker sets should be deployed. A broker set contains one master with brokerId set to 0 and several slaves with non-zero brokerIDs. All the brokers in one set have the same brokerName. In serious scenarios, we should have at least two brokers in one broker set. Each topic resides in two or more brokers.</p>
 
 <h3 id="configuration">Configuration</h3>
 <p>When deploying a RocketMQ cluster, recommended configuration is listed below:</p>
@@ -563,7 +563,7 @@
       <td style="text-align: right">file path for consume queue</td>
     </tr>
     <tr>
-      <td>mapedFileSizeCommitLog</td>
+      <td>mappedFileSizeCommitLog</td>
       <td style="text-align: center">1024 * 1024 * 1024(1G)</td>
       <td style="text-align: right">mapped file size for commit log</td>
     </tr>
@@ -573,7 +573,7 @@
       <td style="text-align: right">When to delete the commitlog which is out of the reserve time</td>
     </tr>
     <tr>
-      <td>fileReserverdTime</td>
+      <td>fileReservedTime</td>
       <td style="text-align: center">72</td>
       <td style="text-align: right">The number of hours to keep a commitlog before deleting it</td>
     </tr>
@@ -651,7 +651,7 @@ If you want to get more information about a specific command like ‘clusterList
  <span class="o">-</span><span class="n">h</span><span class="o">,--</span><span class="n">help</span>                <span class="nc">Print</span> <span class="n">help</span>
  <span class="o">-</span><span class="n">i</span><span class="o">,--</span><span class="n">interval</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span>      <span class="n">specify</span> <span class="n">intervals</span> <span class="n">numbers</span><span class="o">,</span> <span class="n">it</span> <span class="n">is</span> <span class="n">in</span> <span class="n">seconds</span>
  <span class="o">-</span><span class="n">m</span><span class="o">,--</span><span class="n">moreStats</span>           <span class="nc">Print</span> <span class="n">more</span> <span class="n">stats</span>
- <span class="o">-</span><span class="n">n</span><span class="o">,--</span><span class="n">namesrvAddr</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span>   <span class="nc">Name</span> <span class="n">server</span> <span class="n">address</span> <span class="n">list</span><span class="o">,</span> <span class="nl">eg:</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">9876</span><span class="o">;</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span>
+ <span class="o">-</span><span class="n">n</span><span class="o">,--</span><span class="n">namesrvAddr</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span>   <span class="nc">Name</span> <span class="n">server</span> <span class="n">address</span> <span class="n">list</span><span class="o">,</span> <span class="nl">eg:</span> <span class="err">'</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">9876</span><span class="o">;</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="err">'</span>
 </code></pre></div></div>
 
 <h3 id="replication-mode">Replication mode</h3>
@@ -676,10 +676,10 @@ If you want to get more information about a specific command like ‘clusterList
 <p>Then start the brokers(Assume binary RocketMQ is at /home/rocketmq/dist)</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">rocketmq</span><span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="n">bin</span>
-<span class="o">&gt;</span><span class="n">bash</span> <span class="n">mqbroker</span> <span class="o">-</span><span class="n">c</span> <span class="o">../</span><span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="n">s</span><span class="o">-</span><span class="n">sync</span><span class="o">/</span><span class="n">broker</span><span class="o">-</span><span class="n">a</span><span class="o">.</span><span class="na">properties</span> <span class="o">-</span><span class="n">n</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="o">,</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">9876</span>
-<span class="o">&gt;</span><span class="n">bash</span> <span class="n">mqbroker</span> <span class="o">-</span><span class="n">c</span> <span class="o">../</span><span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="n">s</span><span class="o">-</span><span class="n">sync</span><span class="o">/</span><span class="n">broker</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">s</span><span class="o">.</span><span class="na">properties</span> <span class="o">-</span><span class="n">n</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="o">,</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">9876</span>
-<span class="o">&gt;</span><span class="n">bash</span> <span class="n">mqbroker</span> <span class="o">-</span><span class="n">c</span> <span class="o">../</span><span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="n">s</span><span class="o">-</span><span class="n">sync</span><span class="o">/</span><span class="n">broker</span><span class="o">-</span><span class="n">b</span><span class="o">.</span><span class="na">properties</span> <span class="o">-</span><span class="n">n</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="o">,</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">9876</span>
-<span class="o">&gt;</span><span class="n">bash</span> <span class="n">mqbroker</span> <span class="o">-</span><span class="n">c</span> <span class="o">../</span><span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="n">s</span><span class="o">-</span><span class="n">sync</span><span class="o">/</span><span class="n">broker</span><span class="o">-</span><span class="n">b</span><span class="o">-</span><span class="n">s</span><span class="o">.</span><span class="na">properties</span> <span class="o">-</span><span class="n">n</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="o">,</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">9876</span>
+<span class="o">&gt;</span><span class="n">bash</span> <span class="n">mqbroker</span> <span class="o">-</span><span class="n">c</span> <span class="o">../</span><span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="n">s</span><span class="o">-</span><span class="n">sync</span><span class="o">/</span><span class="n">broker</span><span class="o">-</span><span class="n">a</span><span class="o">.</span><span class="na">properties</span> <span class="o">-</span><span class="n">n</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="o">;</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">9876</span>
+<span class="o">&gt;</span><span class="n">bash</span> <span class="n">mqbroker</span> <span class="o">-</span><span class="n">c</span> <span class="o">../</span><span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="n">s</span><span class="o">-</span><span class="n">sync</span><span class="o">/</span><span class="n">broker</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">s</span><span class="o">.</span><span class="na">properties</span> <span class="o">-</span><span class="n">n</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="o">;</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">9876</span>
+<span class="o">&gt;</span><span class="n">bash</span> <span class="n">mqbroker</span> <span class="o">-</span><span class="n">c</span> <span class="o">../</span><span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="n">s</span><span class="o">-</span><span class="n">sync</span><span class="o">/</span><span class="n">broker</span><span class="o">-</span><span class="n">b</span><span class="o">.</span><span class="na">properties</span> <span class="o">-</span><span class="n">n</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="o">;</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">9876</span>
+<span class="o">&gt;</span><span class="n">bash</span> <span class="n">mqbroker</span> <span class="o">-</span><span class="n">c</span> <span class="o">../</span><span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="n">s</span><span class="o">-</span><span class="n">sync</span><span class="o">/</span><span class="n">broker</span><span class="o">-</span><span class="n">b</span><span class="o">-</span><span class="n">s</span><span class="o">.</span><span class="na">properties</span> <span class="o">-</span><span class="n">n</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.2</span><span class="o">:</span><span class="mi">9876</span><span class="o">;</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">9876</span>
 <span class="nc">How</span> <span class="n">to</span> <span class="n">verify</span>
 <span class="nc">Execute</span> <span class="n">the</span> <span class="n">following</span> <span class="n">command</span> <span class="n">to</span> <span class="n">verify</span> <span class="n">according</span> <span class="n">to</span> <span class="n">the</span> <span class="no">CLI</span> <span class="nl">section:</span>
 <span class="o">&gt;</span> <span class="n">bash</span> <span class="n">mqadmin</span> <span class="n">clusterlist</span>
@@ -774,7 +774,7 @@ If you want to get more information about a specific command like ‘clusterList
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

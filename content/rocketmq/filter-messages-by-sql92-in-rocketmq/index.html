@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-04-26T00:00:00+08:00">
+  <meta property="article:published_time" content="2017-04-26T00:00:00+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -309,7 +309,7 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>So far, RocketMQ only support message filtering feature by <code class="highlighter-rouge">TAG</code>, but one message only can own one tag, this is too limited to meet complex business requirements.</p>
+        <p>So far, RocketMQ only support message filtering feature by <code class="language-plaintext highlighter-rouge">TAG</code>, but one message only can own one tag, this is too limited to meet complex business requirements.</p>
 
 <p>So, we want to define and implement a reasonable filter language based on a subset of the SQL 92 expression syntax to support customized message filtering.</p>
 
@@ -320,10 +320,10 @@
 <p>As I know, ActiveMQ already impllement this functionality based on JavaCC, it’s simple and exntensible.So I just extract it and integrate into RocketMQ, only some grammars:</p>
 
 <ol>
-  <li>Numeric comparison, like <code class="highlighter-rouge">&gt;</code>, <code class="highlighter-rouge">&gt;=</code>, <code class="highlighter-rouge">&lt;</code>, <code class="highlighter-rouge">&lt;=</code>, <code class="highlighter-rouge">BETWEEN</code>, <code class="highlighter-rouge">=</code>;</li>
-  <li>Character comparison, like <code class="highlighter-rouge">=</code>, <code class="highlighter-rouge">&lt;&gt;</code>, <code class="highlighter-rouge">IN</code>;</li>
-  <li><code class="highlighter-rouge">IS NULL</code> or <code class="highlighter-rouge">IS NOT NULL</code>;</li>
-  <li>Logical <code class="highlighter-rouge">AND</code>, logical <code class="highlighter-rouge">OR</code>, logical <code class="highlighter-rouge">NOT</code>;</li>
+  <li>Numeric comparison, like <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code>, <code class="language-plaintext highlighter-rouge">BETWEEN</code>, <code class="language-plaintext highlighter-rouge">=</code>;</li>
+  <li>Character comparison, like <code class="language-plaintext highlighter-rouge">=</code>, <code class="language-plaintext highlighter-rouge">&lt;&gt;</code>, <code class="language-plaintext highlighter-rouge">IN</code>;</li>
+  <li><code class="language-plaintext highlighter-rouge">IS NULL</code> or <code class="language-plaintext highlighter-rouge">IS NOT NULL</code>;</li>
+  <li>Logical <code class="language-plaintext highlighter-rouge">AND</code>, logical <code class="language-plaintext highlighter-rouge">OR</code>, logical <code class="language-plaintext highlighter-rouge">NOT</code>;</li>
 </ol>
 
 <p>Constant type are:</p>
@@ -331,8 +331,8 @@
 <ol>
   <li>Numeric, like 123, 3.1415;</li>
   <li>Character, like ‘abc’, must be maked with single quotes;</li>
-  <li><code class="highlighter-rouge">NULL</code>, special constant;</li>
-  <li>Boolean, <code class="highlighter-rouge">TRUE</code> or <code class="highlighter-rouge">FALSE</code>;</li>
+  <li><code class="language-plaintext highlighter-rouge">NULL</code>, special constant;</li>
+  <li>Boolean, <code class="language-plaintext highlighter-rouge">TRUE</code> or <code class="language-plaintext highlighter-rouge">FALSE</code>;</li>
 </ol>
 
 <h3 id="design">Design</h3>
@@ -343,8 +343,8 @@
 <p><img src="/assets/images/blog/filter_structure_apach.png" alt="screenshot" /></p>
 
 <ol>
-  <li>Broker collects the expression of consumer through heartbeat request, and saved in <code class="highlighter-rouge">ConsumerFilterManager</code>.</li>
-  <li>When consumer pulls messages, broker will construct a <code class="highlighter-rouge">MessageFilter</code>(an interface) with compiled expression and subscription data to select matched messages in <code class="highlighter-rouge">CommitLog</code>.</li>
+  <li>Broker collects the expression of consumer through heartbeat request, and saved in <code class="language-plaintext highlighter-rouge">ConsumerFilterManager</code>.</li>
+  <li>When consumer pulls messages, broker will construct a <code class="language-plaintext highlighter-rouge">MessageFilter</code>(an interface) with compiled expression and subscription data to select matched messages in <code class="language-plaintext highlighter-rouge">CommitLog</code>.</li>
 </ol>
 
 <p>The main logic is simple.</p>
@@ -355,7 +355,7 @@
 
 <p>The implementation of SQL92 language is placed in this module which have dependency on common module.</p>
 
-<p>Broker compile or evaluate expression through the interface of <code class="highlighter-rouge">FilterSpi</code> contained in <code class="highlighter-rouge">FilterFactory</code> that manage all <code class="highlighter-rouge">FilterSpi</code> and also support new one to register.</p>
+<p>Broker compile or evaluate expression through the interface of <code class="language-plaintext highlighter-rouge">FilterSpi</code> contained in <code class="language-plaintext highlighter-rouge">FilterFactory</code> that manage all <code class="language-plaintext highlighter-rouge">FilterSpi</code> and also support new one to register.</p>
 
 <ul>
   <li>How to manage consumer’s expression data</li>
@@ -363,15 +363,15 @@
 
 <p>Different from tag filtering, expression of SQL92 should be compiled first to check whether is leagal and then use the complied expression to compute. This procedure is designed to take place at broker.</p>
 
-<p><code class="highlighter-rouge">ConsumerManager</code> manage the suscriptions of push consumer, and <code class="highlighter-rouge">ConsumerFilterManager</code> manage the expression info of push consumer who wish to filter message by special language, the info includes data version, expression, compiled expression, alive time and etc.</p>
+<p><code class="language-plaintext highlighter-rouge">ConsumerManager</code> manage the suscriptions of push consumer, and <code class="language-plaintext highlighter-rouge">ConsumerFilterManager</code> manage the expression info of push consumer who wish to filter message by special language, the info includes data version, expression, compiled expression, alive time and etc.</p>
 
 <ul>
   <li>How to filter message by expression</li>
 </ul>
 
-<p>I redesign the interface <code class="highlighter-rouge">getMessage</code> of <code class="highlighter-rouge">MessageStore</code> by replace the last parameter <code class="highlighter-rouge">SubscriptionData</code> to <code class="highlighter-rouge">MessageFilter</code> that is also refactored. The purpose is to make module <code class="highlighter-rouge">rocketmq-store</code> has no relation with protocol.</p>
+<p>I redesign the interface <code class="language-plaintext highlighter-rouge">getMessage</code> of <code class="language-plaintext highlighter-rouge">MessageStore</code> by replace the last parameter <code class="language-plaintext highlighter-rouge">SubscriptionData</code> to <code class="language-plaintext highlighter-rouge">MessageFilter</code> that is also refactored. The purpose is to make module <code class="language-plaintext highlighter-rouge">rocketmq-store</code> has no relation with protocol.</p>
 
-<p>When get message, the implementation <code class="highlighter-rouge">ExpressionMessageFilter</code> would check whether the message is matched by <code class="highlighter-rouge">BitsArray</code> which will be refered later or evaluation, just as the mechanism of tag filtering.</p>
+<p>When get message, the implementation <code class="language-plaintext highlighter-rouge">ExpressionMessageFilter</code> would check whether the message is matched by <code class="language-plaintext highlighter-rouge">BitsArray</code> which will be refered later or evaluation, just as the mechanism of tag filtering.</p>
 
 <ul>
   <li>Optimization, pre-calculate the filtering result when build consume queue</li>
@@ -384,15 +384,15 @@
   <li>decode message properties, once every consumer subscribed same topic pull message.</li>
 </ol>
 
-<p><code class="highlighter-rouge">BloomFilter</code> and pre-calculation are adopted to optimize the situation:</p>
+<p><code class="language-plaintext highlighter-rouge">BloomFilter</code> and pre-calculation are adopted to optimize the situation:</p>
 
 <p><img src="/assets/images/blog/filter_build_cq_apache.png" alt="screenshot" /></p>
 
 <ol>
-  <li>Every consumer has been asigned some bit position of <code class="highlighter-rouge">BloomFilter</code> when register to broker.</li>
-  <li>When broker build queue after message into <code class="highlighter-rouge">CommitLog</code>, the consumer’s filtering result would be calculated, and all resuls are assembled as a <code class="highlighter-rouge">BitsArray</code> saved in <code class="highlighter-rouge">ConsumeQueueExt</code>.</li>
-  <li><code class="highlighter-rouge">ConsumeQueueExt</code> is a store file linked to <code class="highlighter-rouge">ConsumeQueue</code>, <code class="highlighter-rouge">ConsumeQueue</code> could find the data by the <code class="highlighter-rouge">tagsCode</code> whitch is already replaced by the address(for compitable, the range is Long.MIN_VALUE to Integer.MIN_VALUE) generated by <code class="highlighter-rouge">ConsumeQueueExt</code>.</li>
-  <li><code class="highlighter-rouge">ExpressionMessageFilter</code> could use the <code class="highlighter-rouge">BitsArray</code> to check whether the message is matched. Because of BloomFilter’s collision, it also need to decode properties to do calculation for matched message(may could be reduced by check the collision, not include in this edition).</li>
+  <li>Every consumer has been asigned some bit position of <code class="language-plaintext highlighter-rouge">BloomFilter</code> when register to broker.</li>
+  <li>When broker build queue after message into <code class="language-plaintext highlighter-rouge">CommitLog</code>, the consumer’s filtering result would be calculated, and all resuls are assembled as a <code class="language-plaintext highlighter-rouge">BitsArray</code> saved in <code class="language-plaintext highlighter-rouge">ConsumeQueueExt</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">ConsumeQueueExt</code> is a store file linked to <code class="language-plaintext highlighter-rouge">ConsumeQueue</code>, <code class="language-plaintext highlighter-rouge">ConsumeQueue</code> could find the data by the <code class="language-plaintext highlighter-rouge">tagsCode</code> whitch is already replaced by the address(for compitable, the range is Long.MIN_VALUE to Integer.MIN_VALUE) generated by <code class="language-plaintext highlighter-rouge">ConsumeQueueExt</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">ExpressionMessageFilter</code> could use the <code class="language-plaintext highlighter-rouge">BitsArray</code> to check whether the message is matched. Because of BloomFilter’s collision, it also need to decode properties to do calculation for matched message(may could be reduced by check the collision, not include in this edition).</li>
 </ol>
 
 <p>This optimization is suitable for:</p>
@@ -415,7 +415,7 @@
 
 <p>Only push consumer could filter message by SQL92 expression in this edition, the interface is:</p>
 
-<p><code class="highlighter-rouge">public void subscribe(final String topic, final MessageSelector messageSelector)</code></p>
+<p><code class="language-plaintext highlighter-rouge">public void subscribe(final String topic, final MessageSelector messageSelector)</code></p>
 
 <h3 id="performance-comparison">Performance Comparison</h3>
 
@@ -478,7 +478,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-26T00:00:00+08:00">April 26, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-26T00:00:00+00:00">April 26, 2017</time></p>
         
       </footer>
 
@@ -539,7 +539,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/release_notes/release-notes-4.7.1/" rel="permalink">Release Notes - Apache RocketMQ - Version 4.7.1
+        <a href="/release_notes/release-notes-rocketmq-client-go-2.1.1/" rel="permalink">Release Notes - Apache RocketMQ Client Go- Version 2.1.1
 </a>
       
     </h2>
@@ -549,10 +549,10 @@
 
 
 
-  2 minute read
+  3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the 4.7.1 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to Q...</p>
+    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the version 2.1.1 release of RocketMQ Client Go. For full documentation of the release, a guide to get started,...</p>
   </article>
 </div>
         
@@ -565,7 +565,33 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/release_notes/release-notes-rocketmq-client-cpp-2.2.0/" rel="permalink">Release Notes - Apache RocketMQ Client CPP- Version 2.2.0
+        <a href="/release_notes/release-notes-4.9.4/" rel="permalink">Release Notes - Apache RocketMQ - Version 4.9.4
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the 4.9.4 release of RocketMQ. For full documentation of the release, a guide to get started, please refer to Q...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/release_notes/release-notes-rocketmq-streams-1.0.1-preview/" rel="permalink">Release Notes - Apache RocketMQ Streams - Version 1.0.1-preview
 </a>
       
     </h2>
@@ -578,7 +604,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the version 2.2.0 release of RocketMQ Client CPP. For full documentation of the release, a guide to get started...</p>
+    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the 1.0.1-preview release of RocketMQ Streams. For full documentation of the release, a guide to get started, p...</p>
   </article>
 </div>
         
@@ -591,33 +617,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/release_notes/release-notes-rocketmq-client-go-2.0.0/" rel="permalink">Release Notes - Apache RocketMQ Client Go- Version 2.0.0
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the version 2.0.0 release of RocketMQ Client Go. For full documentation of the release, a guide to get started,...</p>
-  </article>
-</div>
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/release_notes/release-notes-rocketmq-client-cpp-2.1.0/" rel="permalink">Release Notes - Apache RocketMQ Client CPP- Version 2.1.0
+        <a href="/release_notes/release-notes-rocketmq-spring-2.2.2/" rel="permalink">Release Notes - Apache RocketMQ Spring - Version 2.2.2
 </a>
       
     </h2>
@@ -630,7 +630,7 @@
   1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the version 2.1.0 release of RocketMQ Client CPP. For full documentation of the release, a guide to get started...</p>
+    <p class="archive__item-excerpt" itemprop="description">Below is a summary of the issues addressed in the version 2.2.2 release of RocketMQ Spring. For full documentation of the release, a guide to get started, pl...</p>
   </article>
 </div>
         
@@ -670,7 +670,7 @@
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

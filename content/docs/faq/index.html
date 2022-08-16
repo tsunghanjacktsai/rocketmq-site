@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -522,7 +522,7 @@ The broadcaset consumption still ensures that a message is consumered at least o
 <h3 id="3-how-to-set-the-number-of-consumer-threads">3. How to set the number of consumer threads?</h3>
 <p>When you start Consumer, set a ConsumeThreadNums property, example is as follows:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consumer.setConsumeThreadMin(20);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consumer.setConsumeThreadMin(20);
 consumer.setConsumeThreadMax(20);
 </code></pre></div></div>
 
@@ -564,7 +564,7 @@ consumer.setConsumeThreadMax(20);
   <li>Make sure that the producer can connect to a name server and is capable of fetching routing meta info from it.</li>
   <li>Make sure that name servers do contain routing meta info of the topic. You may query the routing meta info from name server through topicRoute using admin tools or web console.</li>
   <li>Make sure that your brokers are sending heartbeats to the same list of name servers your producer is connecting to.</li>
-  <li>Make sure that the topic’s permssion is 6(rw-), or at least 2(-w-).</li>
+  <li>Make sure that the topic’s permission is 6(rw-), or at least 2(-w-).</li>
 </ol>
 
 <p>If you can’t find this topic, create it on a broker via admin tools command updateTopic or web console.</p>
@@ -657,7 +657,7 @@ consumer.setConsumeThreadMax(20);
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

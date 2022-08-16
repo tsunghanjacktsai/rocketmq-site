@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -478,41 +478,41 @@
 
 <p>The latest released version of JDK 1.8 is recommended, with server compiler and a 8g heap. Set the same Xms and Xmx value to prevent the JVM from resizing the heap for better performance. A simple JVM configurations looks like this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-server -Xms8g -Xmx8g -Xmn4g
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-server -Xms8g -Xmx8g -Xmn4g
 </code></pre></div></div>
 
 <p>If you don’t care about the boot time of RocketMQ broker, pre-touch the Java heap to make sure that every page will be allocated during JVM initialization is a better choice. Those who don’t care about the boot time can enable it:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-XX:+AlwaysPreTouch
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-XX:+AlwaysPreTouch
 </code></pre></div></div>
 
 <p>Disable biased locking may reduce JVM pauses:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-XX:-UseBiasedLocking
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-XX:-UseBiasedLocking
 </code></pre></div></div>
 
 <p>As for garbage collection, G1 collector with JDK 1.8 is recommended:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-XX:+UseG1GC -XX:G1HeapRegionSize=16m -XX:G1ReservePercent=25 -XX:InitiatingHeapOccupancyPercent=30
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-XX:+UseG1GC -XX:G1HeapRegionSize=16m -XX:G1ReservePercent=25 -XX:InitiatingHeapOccupancyPercent=30
 </code></pre></div></div>
 
 <p>These GC options looks a little aggressive, but it’s proved to have good performance in our production environment.</p>
 
-<p>Don’t set a too small value for <code class="highlighter-rouge">-XX:MaxGCPauseMillis</code>, otherwise JVM will use a small young generation to achieve this goal which will cause very frequent minor GC.</p>
+<p>Don’t set a too small value for <code class="language-plaintext highlighter-rouge">-XX:MaxGCPauseMillis</code>, otherwise JVM will use a small young generation to achieve this goal which will cause very frequent minor GC.</p>
 
 <p>And use rolling GC log file is recommended:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=30m
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=30m
 </code></pre></div></div>
 
 <p>If write GC file will increase latency of broker, consider redirect GC log file to a memory file system:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-Xloggc:/dev/shm/mq_gc_%p.log
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-Xloggc:/dev/shm/mq_gc_%p.log
 </code></pre></div></div>
 
 <h1 id="linux-kernel-parameters">Linux Kernel Parameters</h1>
 
-<p>There is a <code class="highlighter-rouge">os.sh</code> script that lists a lot of kernel parameters in folder <code class="highlighter-rouge">bin</code> which can be used for production use with minor changes. Below parameters need attention, and more details please refer to documentation for /proc/sys/vm/*[1].</p>
+<p>There is a <code class="language-plaintext highlighter-rouge">os.sh</code> script that lists a lot of kernel parameters in folder <code class="language-plaintext highlighter-rouge">bin</code> which can be used for production use with minor changes. Below parameters need attention, and more details please refer to documentation for /proc/sys/vm/*[1].</p>
 
 <p><strong>vm.extra_free_kbytes</strong>, tells the VM to keep extra free memory between the threshold where background reclaim (kswapd) kicks in, and the threshold where direct reclaim (by allocating processes) kicks in. RocketMQ uses this parameter to avoid high latency in memory allocation.</p>
 
@@ -622,7 +622,7 @@ may have. RocketMQ will use mmap to load CommitLog and ConsumeQueue, so set a bi
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

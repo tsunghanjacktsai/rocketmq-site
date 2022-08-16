@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -478,7 +478,7 @@
 
 <p>When using log4j properties config file,config as below.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>log4j.appender.mq=org.apache.rocketmq.logappender.log4j.RocketmqLog4jAppender
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>log4j.appender.mq=org.apache.rocketmq.logappender.log4j.RocketmqLog4jAppender
 log4j.appender.mq.Tag=yourTag
 log4j.appender.mq.Topic=yourLogTopic
 log4j.appender.mq.ProducerGroup=yourLogGroup
@@ -489,7 +489,7 @@ log4j.appender.mq.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-4r [%t] (%F
 
 <p>When using log4j xml config file,config it as this and also add a async appender:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;appender name="mqAppender1" class="org.apache.rocketmq.logappender.log4j.RocketmqLog4jAppender"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;appender name="mqAppender1" class="org.apache.rocketmq.logappender.log4j.RocketmqLog4jAppender"&gt;
     &lt;param name="Tag" value="yourTag" /&gt;
     &lt;param name="Topic" value="yourLogTopic" /&gt;
     &lt;param name="ProducerGroup" value="yourLogGroup" /&gt;
@@ -509,7 +509,7 @@ log4j.appender.mq.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-4r [%t] (%F
 <h4 id="log4j2">log4j2</h4>
 <p>When using log4j2,config as this.If you want noneblock,just config an asyncAppender for ref.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;RocketMQ name="rocketmqAppender" producerGroup="yourLogGroup" nameServerAddress="yourRocketmqNameserverAddress"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;RocketMQ name="rocketmqAppender" producerGroup="yourLogGroup" nameServerAddress="yourRocketmqNameserverAddress"
      topic="yourLogTopic" tag="yourTag"&gt;
     &lt;PatternLayout pattern="%d [%p] hahahah %c %m%n"/&gt;
 &lt;/RocketMQ&gt;
@@ -519,7 +519,7 @@ log4j.appender.mq.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-4r [%t] (%F
 <h4 id="logback">logback</h4>
 <p>When using logback,an asyncAppender also needed.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;appender name="mqAppender1" class="org.apache.rocketmq.logappender.logback.RocketmqLogbackAppender"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;appender name="mqAppender1" class="org.apache.rocketmq.logappender.logback.RocketmqLogbackAppender"&gt;
     &lt;tag&gt;yourTag&lt;/tag&gt;
     &lt;topic&gt;yourLogTopic&lt;/topic&gt;
     &lt;producerGroup&gt;yourLogGroup&lt;/producerGroup&gt;
@@ -628,7 +628,7 @@ log4j.appender.mq.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-4r [%t] (%F
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

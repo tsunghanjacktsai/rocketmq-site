@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -477,38 +477,38 @@
 </aside>
 
 <h1 id="git-setup-for-contributors">Git setup for Contributors</h1>
-<p>First of all, fork github’s <code class="highlighter-rouge">apache/rocketmq</code> to your own account on github and clone it as follows,</p>
+<p>First of all, fork github’s <code class="language-plaintext highlighter-rouge">apache/rocketmq</code> to your own account on github and clone it as follows,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;your_github_name&gt;/rocketmq.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;your_github_name&gt;/rocketmq.git
 </code></pre></div></div>
 
-<p>Cloning this locally will set up <code class="highlighter-rouge">origin</code> to point to your remote fork on github as the default remote.
+<p>Cloning this locally will set up <code class="language-plaintext highlighter-rouge">origin</code> to point to your remote fork on github as the default remote.
 Now you can create your pull requests.</p>
 
 <p>You will need to update a local master sometimes (to merge to your development branches sometimes).
 For this, you have to add remote for RocketMQ mirror as follows,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add upstream https://github.com/apache/rocketmq.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add upstream https://github.com/apache/rocketmq.git
 </code></pre></div></div>
 
-<p>and update your local master via <code class="highlighter-rouge">git fetch</code> followed by <code class="highlighter-rouge">git rebase</code>, for instance:
+<p>and update your local master via <code class="language-plaintext highlighter-rouge">git fetch</code> followed by <code class="language-plaintext highlighter-rouge">git rebase</code>, for instance:
     git fetch upstream master
     git rebase upstream/master</p>
 
 <h1 id="git-setup-for-committers">Git setup for Committers</h1>
 <p>In addition to contributors’ configurations, committers will have to attach the apache git repo:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add apache https://git-wip-us.apache.org/repos/asf/rocketmq.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add apache https://git-wip-us.apache.org/repos/asf/rocketmq.git
 </code></pre></div></div>
 
 <p>To check your remote setup, issue</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
 </code></pre></div></div>
 
 <p>You should see something like this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>origin    https://github.com/&lt;your_github_name&gt;/rocketmq.git (fetch)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>origin    https://github.com/&lt;your_github_name&gt;/rocketmq.git (fetch)
 origin    https://github.com/&lt;your_github_name&gt;/rocketmq.git (push)
 upstream  https://github.com/apache/rocketmq.git (fetch)
 upstream  https://github.com/apache/rocketmq.git (push)
@@ -518,14 +518,14 @@ apache    https://git-wip-us.apache.org/repos/asf/rocketmq.git (push)
 
 <p>Now if you want to experiment with a branch everything, by default, points to your github account because ‘origin’ is default. You can work as normal using only github until you are ready to merge with the apache remote. Some conventions will integrate with Apache JIRA ticket numbers.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b ROCKETMQ-xxxx #xxxx typically is a JIRA ticket number
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b ROCKETMQ-xxxx #xxxx typically is a JIRA ticket number
 </code></pre></div></div>
 
 <p><em>To ensure the code quality of the master branch, all but minor changes should go through pull requests reviewed by peer committers.</em></p>
 
 <h1 id="do-some-work-on-the-branch">Do some work on the branch</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -a -m "doing some work"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -a -m "doing some work"
 git push origin ROCKETMQ-xxxx # notice pushing to **origin** not **apache**
 </code></pre></div></div>
 
@@ -535,7 +535,7 @@ git push origin ROCKETMQ-xxxx # notice pushing to **origin** not **apache**
 
 <p>Push your branch to Github:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout ROCKETMQ-xxxx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout ROCKETMQ-xxxx
 git push origin ROCKETMQ-xxxx
 </code></pre></div></div>
 
@@ -560,7 +560,7 @@ git push origin ROCKETMQ-xxxx
 
 <p>For information about creating pull requests, please check <a href="https://help.github.com/articles/creating-a-pull-request/">GitHub PR docs</a>.</p>
 
-<p>Pull requests are made to <code class="highlighter-rouge">apache/rocketmq</code> repository on Github.
+<p>Pull requests are made to <code class="language-plaintext highlighter-rouge">apache/rocketmq</code> repository on Github.
 In the Github UI you can pick the develop branch as target of the PR. <br />
 You pull request will be reviewed and commented by committers, and issues can be discussed. When all reviewers are positive on the pull request, it will be merged.</p>
 
@@ -652,7 +652,7 @@ You pull request will be reviewed and commented by committers, and issues can be
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

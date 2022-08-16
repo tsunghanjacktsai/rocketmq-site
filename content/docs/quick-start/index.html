@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -511,14 +511,14 @@ and receive messages.</p>
 
 <h1 id="download--build-from-release">Download &amp; Build from Release</h1>
 
-<p>Click <a href="https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.1/rocketmq-all-4.7.1-source-release.zip">here</a> to download the 4.7.1 source release. Also you could download a binary release from <a href="https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.1/rocketmq-all-4.7.1-bin-release.zip">here</a>.</p>
+<p>Click <a href="https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.9.4/rocketmq-all-4.9.4-source-release.zip">here</a> to download the 4.9.4 source release. Also you could download a binary release from <a href="https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.9.4/rocketmq-all-4.9.4-bin-release.zip">here</a>.</p>
 
-<p>Now execute the following commands to unpack 4.7.1 source release and build the binary artifact.</p>
+<p>Now execute the following commands to unpack 4.9.4 source release and build the binary artifact.</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="o">&gt;</span> unzip rocketmq-all-4.7.1-source-release.zip
-  <span class="o">&gt;</span> <span class="nb">cd </span>rocketmq-all-4.7.1/
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="o">&gt;</span> unzip rocketmq-all-4.9.4-source-release.zip
+  <span class="o">&gt;</span> <span class="nb">cd </span>rocketmq-all-4.9.4-source-release/
   <span class="o">&gt;</span> mvn <span class="nt">-Prelease-all</span> <span class="nt">-DskipTests</span> clean <span class="nb">install</span> <span class="nt">-U</span>
-  <span class="o">&gt;</span> <span class="nb">cd </span>distribution/target/rocketmq-4.7.1/rocketmq-4.7.1
+  <span class="o">&gt;</span> <span class="nb">cd </span>distribution/target/rocketmq-4.9.4/rocketmq-4.9.4
 </code></pre></div></div>
 <h1 id="linux">Linux</h1>
 
@@ -538,7 +538,7 @@ and receive messages.</p>
 
 <h2 id="send--receive-messages">Send &amp; Receive Messages</h2>
 
-<p>Before sending/receiving messages, we need to tell clients the location of name servers. RocketMQ provides multiple ways to achieve this. For simplicity, we use environment variable <code class="highlighter-rouge">NAMESRV_ADDR</code></p>
+<p>Before sending/receiving messages, we need to tell clients the location of name servers. RocketMQ provides multiple ways to achieve this. For simplicity, we use environment variable <code class="language-plaintext highlighter-rouge">NAMESRV_ADDR</code></p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&gt;</span> <span class="nb">export </span><span class="nv">NAMESRV_ADDR</span><span class="o">=</span>localhost:9876
  <span class="o">&gt;</span> sh bin/tools.sh org.apache.rocketmq.example.quickstart.Producer
@@ -563,7 +563,7 @@ Send shutdown request to mqnamesrv<span class="o">(</span>36664<span class="o">)
 
 <p>The guide is working for windows 10 , please make sure you have powershell installed.</p>
 
-<p>Download latest binary release. and extract zip file into your local disk. Such as: <code class="highlighter-rouge">D:\rocketmq</code></p>
+<p>Download latest binary release. and extract zip file into your local disk. Such as: <code class="language-plaintext highlighter-rouge">D:\rocketmq</code></p>
 
 <h2 id="add-environment-variables">Add Environment Variables</h2>
 
@@ -608,7 +608,7 @@ Send shutdown request to mqnamesrv<span class="o">(</span>36664<span class="o">)
 
 <p>Open new powershell window, after set the correct environment variable. then change directory to rocketmq type and run:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.<span class="se">\b</span><span class="k">in</span><span class="se">\t</span>ool.cmd  org.apache.rocketmq.example.quickstart.Producer
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.<span class="se">\b</span><span class="k">in</span><span class="se">\t</span>ools.cmd  org.apache.rocketmq.example.quickstart.Producer
 </code></pre></div></div>
 <h3 id="receive-messages">Receive Messages</h3>
 
@@ -616,7 +616,7 @@ Send shutdown request to mqnamesrv<span class="o">(</span>36664<span class="o">)
 
 <p>Open new powershell window, after set the correct environment variable. then change directory to rocketmq type and run:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.<span class="se">\b</span><span class="k">in</span><span class="se">\t</span>ool.cmd  org.apache.rocketmq.example.quickstart.Consumer
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.<span class="se">\b</span><span class="k">in</span><span class="se">\t</span>ools.cmd  org.apache.rocketmq.example.quickstart.Consumer
 </code></pre></div></div>
 
 <h2 id="shutdown-servers-1">Shutdown Servers</h2>
@@ -710,7 +710,7 @@ Send shutdown request to mqnamesrv<span class="o">(</span>36664<span class="o">)
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>

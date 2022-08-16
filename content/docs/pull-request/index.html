@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-06-29T10:31:55+08:00">
+  <meta property="article:published_time" content="2022-08-16T02:12:09+00:00">
 
 
 
@@ -137,7 +137,7 @@
             <li class="masthead__menu-item"><a href="/users/">Users</a></li>
           
             
-            <li class="masthead__menu-item"><a href="/about/team/">About</a></li>
+            <li class="masthead__menu-item"><a href="/about/origin/">About</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -479,29 +479,30 @@
 </aside>
 
 <h1 id="git-setup-for-contributors">Git setup for Contributors</h1>
-<p>First of all, fork github’s <code class="highlighter-rouge">apache/rocketmq</code> to your own account on github and clone it as follows,</p>
+<p>First of all, fork github’s <a href="https://github.com/apache/rocketmq">apache/rocketmq</a> to your own account on github and clone it as follows,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;your_github_name&gt;/rocketmq.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;your_github_name&gt;/rocketmq.git
 </code></pre></div></div>
 
-<p>Cloning this locally will set up <code class="highlighter-rouge">origin</code> to point to your remote fork on github as the default remote.
+<p>Cloning this locally will set up <code class="language-plaintext highlighter-rouge">origin</code> to point to your remote fork on github as the default remote.
 Now you can create your pull requests.</p>
 
 <p>You will need to update a local master sometimes (to merge to your development branches).
 For this, you have to add remote for RocketMQ mirror as follows,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add apache https://github.com/apache/rocketmq.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add apache https://github.com/apache/rocketmq.git
 </code></pre></div></div>
 
-<p>and update your local master via <code class="highlighter-rouge">git fetch</code> followed by <code class="highlighter-rouge">git rebase</code>, for instance:</p>
+<p>and update your local master via <code class="language-plaintext highlighter-rouge">git fetch</code> followed by <code class="language-plaintext highlighter-rouge">git rebase</code>, for instance:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch apache master
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch apache master
 git rebase apache/master
 </code></pre></div></div>
 
 <h1 id="do-some-work-on-the-branch">Do some work on the branch</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -a -m "doing some work"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b ROCKETMQ-xxxx # create a branch 
+git commit -a -m "doing some work"
 git push origin ROCKETMQ-xxxx # notice pushing to **origin** not **apache**
 </code></pre></div></div>
 
@@ -511,7 +512,7 @@ git push origin ROCKETMQ-xxxx # notice pushing to **origin** not **apache**
 
 <p>Push your branch to Github:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout ROCKETMQ-xxxx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout ROCKETMQ-xxxx
 git push origin ROCKETMQ-xxxx
 </code></pre></div></div>
 
@@ -519,7 +520,7 @@ git push origin ROCKETMQ-xxxx
   <li>
     <p>Go to your ROCKETMQ-xxxx branch on Github. Since you forked it from Github’s apache/rocketmq. By default all PR will go to apache/master.</p>
   </li>
-  <li>Click the green “Compare, review, and create pull request” button. You can edit the to and from for the PR if it isn’t correct. The “base fork” should be apache/rocketmq unless you are collaborating with one of the committers on the list. The “base” will be master. Don’t submit a PR to any other branches unless permitted by branch owner. The “head fork” will be your forked repo and the “compare” will be your ROCKETMQ-xxxx branch.</li>
+  <li>Click the green “Compare, review, and create pull request” button. You can edit the <code class="language-plaintext highlighter-rouge">to</code> and <code class="language-plaintext highlighter-rouge">from</code> for the PR if it isn’t correct. The “base fork” should be apache/rocketmq unless you are collaborating with one of the committers on the list. The “base” will be master. Don’t submit a PR to any other branches unless permitted by branch owner. The “head fork” will be your forked repo and the “compare” will be your ROCKETMQ-xxxx branch.</li>
   <li>Click the “Create pull request” button and name the request “ROCKETMQ-xxxx” all caps. This will connect the comments of the PR to the mailing list and issue comments.</li>
   <li>From now on the PR lives on github’s apache/rocketmq. You can use the commenting UI there.</li>
   <li>If you are looking for a review or wanting to share with someone else please write a note in the comments and don’t worry about automated merging of your PR – you will have to do that later. The PR is tied to your branch so you can respond to comments, make fixes, and commit them from your local repo. They will appear on the PR page and be mirrored to Github issue and the mailing list.</li>
@@ -531,12 +532,12 @@ git push origin ROCKETMQ-xxxx
 <ol>
   <li>A corresponding <a href="https://github.com/apache/rocketmq/issues">Github issue</a> is created and has a clear problem description.</li>
   <li>Make sure you follow <a href="/docs/code-guidelines/">Coding Guidelines</a>.</li>
-  <li>You have unit tests for everything you are about to commit.</li>
+  <li>You have unit tests for everything you are about to commit. All pull requests are automatically tested at <a href="https://travis-ci.org/github/apache/rocketmq">Travis CI</a> on AMD64 and ARM64 CPU architectures.</li>
 </ol>
 
 <p>For information about creating pull requests, please check <a href="https://help.github.com/articles/creating-a-pull-request/">GitHub PR docs</a>.</p>
 
-<p>Pull requests are made to <code class="highlighter-rouge">apache/rocketmq</code> repository on Github. 
+<p>Pull requests are made to <code class="language-plaintext highlighter-rouge">apache/rocketmq</code> repository on Github. 
 In the Github UI you should pick the develop branch as target of the PR. <br />
 You pull request will be reviewed and commented by committers, and issues can be discussed. When all reviewers are positive on the pull request, it will be merged.</p>
 
@@ -544,22 +545,22 @@ You pull request will be reviewed and commented by committers, and issues can be
 
 <p>Each pull request should follow the <a href="https://github.com/apache/rocketmq/blob/master/.github/PULL_REQUEST_TEMPLATE.md">checklist</a> to help us incorporate your contribution quickly and easily.</p>
 
-<p>Remember use <code class="highlighter-rouge">- [x]</code> mark an item finished in the check list and there is a <a href="https://github.com/apache/rocketmq/pull/152">demo pull request</a> can be your reference.</p>
+<p>Remember use <code class="language-plaintext highlighter-rouge">- [x]</code> mark an item finished in the check list and there is a <a href="https://github.com/apache/rocketmq/pull/152">demo pull request</a> can be your reference.</p>
 
 <h1 id="merging-a-pr-yours-or-contributors">Merging a PR (yours or contributors)</h1>
 <p>Start with reading <a href="https://help.github.com/articles/checking-out-pull-requests-locally/">GitHub PR merging locally</a>. Remember that pull requests are equivalent to a remote github branch with potentially a multitude of commits. In this case it is recommended to squash remote commit history to have one commit per issue, rather than merging in a multitude of contributor’s commits. In order to do that, as well as to close the PR at the same time, it is recommended to use squash commits.
 Merging pull requests are equivalent to a “pull” of a contributor’s branch:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout master      # switch to local master branch
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout master      # switch to local master branch
 git pull apache master   # fast-forward to current remote HEAD
 git pull --squash https://github.com/cuser/rocketmq.git ROCKETMQ-xxxx  # merge to master
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">--squash</code> ensures all PR history is squashed into single commit, and allows committer to use his/her own message. Please refer to git help for merge or pull for more information about <code class="highlighter-rouge">--squash</code> option. In this example we assume that the contributor’s Github handle is “cuser” and the PR branch name is “ROCKETMQ-xxxx”. Next, resolve all conflicts, or ask a contributor to rebase on top of master, if PR went out of sync.</p>
+<p><code class="language-plaintext highlighter-rouge">--squash</code> ensures all PR history is squashed into single commit, and allows committer to use his/her own message. Please refer to git help for merge or pull for more information about <code class="language-plaintext highlighter-rouge">--squash</code> option. In this example we assume that the contributor’s Github handle is “cuser” and the PR branch name is “ROCKETMQ-xxxx”. Next, resolve all conflicts, or ask a contributor to rebase on top of master, if PR went out of sync.</p>
 
 <p>If you are ready to merge your own (committer’s) PR you only need to merge (not pull), since you have a local copy that you’ve been working on. This is the branch that you used to create the PR.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout master      # switch to local master branch
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout master      # switch to local master branch
 git pull apache master   # fast-forward to current remote HEAD
 git merge --squash ROCKETMQ-xxxx
 </code></pre></div></div>
@@ -567,19 +568,19 @@ git merge --squash ROCKETMQ-xxxx
 <p>Please run regular patch checks, build with tests enabled, and change CHANGELOG whenever needed.
 If all requirements are met, you can commit the squashed request using:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit --author="contributor_name &lt;contributor_email&gt;" -a -m "ROCKETMQ-XXXX description closes apache/rocketmq#ZZ"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit --author="contributor_name &lt;contributor_email&gt;" -a -m "ROCKETMQ-XXXX description closes apache/rocketmq#ZZ"
 </code></pre></div></div>
 
 <p>ROCKETMQ-XXXX is all capitalized and ZZ is the pull request number on apache/rocketmq repository. Including “closes apache/rocketmq#ZZ” will close the PR automatically. More information can be found here <a href="https://help.github.com/articles/closing-issues-via-commit-messages/">GitHub PR closing docs.</a>.
 Next, push to apache:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push apache master
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push apache master
 </code></pre></div></div>
 
 <p>(this will require Apache handle credentials).
 The PR, once pushed, will get mirrored to github. To update your github version push there too:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin master
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin master
 </code></pre></div></div>
 
 <p>Note on squashing: Since squash discards remote branch history, repeated PRs from the same remote branch are difficult to be merged. The workflow implies that every new PR starts with a new rebased branch. This is more important for contributors to know, rather than for committers, because if new PR is not mergeable, github would warn at the start. Please watch for dupe PRs (based on same source branches).</p>
@@ -587,7 +588,7 @@ The PR, once pushed, will get mirrored to github. To update your github version 
 <h1 id="closing-a-pr-without-committing-for-committers">Closing a PR without committing (for committers)</h1>
 <p>When we want to reject a PR (close without committing), we can just issue an empty commit on master’s HEAD without merging the PR:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit --allow-empty -m "ROCKETMQ-XXXX closes apache/rocketmq#ZZ *Won't fix*"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit --allow-empty -m "ROCKETMQ-XXXX closes apache/rocketmq#ZZ *Won't fix*"
 git push apache master
 </code></pre></div></div>
 
@@ -682,7 +683,7 @@ git push apache master
       </ul>
     </div>
 
-    <div class="page__footer-copyright">Copyright &copy; 2020 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
+    <div class="page__footer-copyright">Copyright &copy; 2022 <a href="http://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a></div>
     <div class="page__footer-copyright">Apache RocketMQ, RocketMQ, Apache, the Apache feather logo and the Apache RocketMQ logo are trademarks of The Apache Software Foundation.</div>
     <br>
     <div class="page__footer-copyright"><a href="https://www.apache.org/licenses/">License</a> | <a href="https://www.apache.org/security/">Security</a> | <a href="https://www.apache.org/foundation/thanks.html">Thanks</a> | <a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></div>
