@@ -12,5 +12,9 @@ codekit-config.json
 example/_site
 Gemfile.lock
 node_modules
+vendor
 npm-debug.log*
 *.iml
+build
+.docusaurus/
+package-lock.json

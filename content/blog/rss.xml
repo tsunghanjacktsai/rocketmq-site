@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>RocketMQ Blog</title>
+        <link>https://your-docusaurus-test-site.com/blog</link>
+        <description>RocketMQ Blog</description>
+        <lastBuildDate>Mon, 05 Sep 2022 04:44:49 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[小红书消息中间件的运维实践与治理之路]]></title>
+            <link>https://your-docusaurus-test-site.com/blog/01xiaohongshu</link>
+            <guid>小红书消息中间件的运维实践与治理之路</guid>
+            <pubDate>Mon, 05 Sep 2022 04:44:49 GMT</pubDate>
+            <description><![CDATA[小红书消息中间件的运维实践与治理之路]]></description>
+        </item>
+    </channel>
+</rss>
