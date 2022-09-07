@@ -120,6 +120,32 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
           path: "./forth-blog",
         },
       ],
+      [
+        '@docusaurus/plugin-client-redirects', {
+          redirects: [
+            {
+              from: '/downloading/release',
+              to: '/download'
+            },
+            {
+              from: '/about/contact/',
+              to: '/contact'
+            },
+            {
+              from: '/docs/rmq-arc',
+              to: '/docs/介绍/03whatis'
+            },
+            {
+              from: '/docs/motivation/',
+              to: `/docs/`
+            },
+            {
+              from: '/docs/quickstart/',
+              to: `/docs/介绍/02quickstart`
+            }
+          ]
+        }
+      ]
     ],
 
     themeConfig:
@@ -201,6 +227,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
               items: [
                 // { to: "/info", label: "项目信息" },
                 { to: "/contact", label: "参与社区" },
+                { to: "/origin", label: "创始团队" },
                 { to: "/team", label: "贡献团队" },
                 { to: "/docs/贡献指南/29how-to-contribute", label: "贡献说明" },
                 // ... more items
