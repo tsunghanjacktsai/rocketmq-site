@@ -66,6 +66,16 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
       ],
     ],
     plugins: [
+      [require.resolve('docusaurus-plugin-baidu-tongji'), {
+        token: '36428f2b841d08e7405724cbf7f860d2'
+      }],
+      [
+        '@docusaurus/plugin-google-analytics',
+        {
+          trackingID: 'UA-89603173-1',
+          anonymizeIP: true,
+        },
+      ],
       [
         "@docusaurus/plugin-content-blog",
         {
@@ -153,71 +163,71 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             },
             {
               from: '/docs/rmq-arc',
-              to: '/docs/领域模型/01main'
+              to: '/docs/domainModel/01main'
             },
             {
               from: '/docs/rmq-deployment/',
-              to: '/docs/部署运维/15deploy'
+              to: '/docs/deploymentOperations/01deploy'
             },
             {
               from: '/docs/motivation/',
               to: '/docs/'
             },
             {
-              from: ['/docs/quickstart/', '/docs/quick-start'],
-              to: '/docs/快速入门/02quickstart'
+              from: ['/docs/quickstart/', '/docs/quick-start', '/docs/quickStart/02quickstart/'],
+              to: '/docs/quickStart/01quickstart'
             },
             {
               from: '/docs/how-to-contribute/',
-              to: '/docs/贡献指南/29how-to-contribute'
+              to: '/docs/contributionGuide/01how-to-contribute'
             },
             {
               from: '/docs/code-guidelines/',
-              to: '/docs/贡献指南/30code-guidelines'
+              to: '/docs/contributionGuide/02code-guidelines'
             },
             {
               from: '/docs/pull-request/',
-              to: '/docs/贡献指南/31pull-request'
+              to: '/docs/contributionGuide/03pull-request'
             },
             {
               from: '/docs/release-manual',
-              to: '/docs/贡献指南/32release-manual'
+              to: '/docs/contributionGuide/04release-manual'
             },
             {
               from: '/docs/cli-admin-tool/',
-              to: '/docs/部署运维/16admintool'
+              to: '/docs/deploymentOperations/02admintool'
             },
             {
               from: '/docs/system-config',
-              to: '/docs/最佳实践/19JVMOS'
+              to: '/docs/bestPractice/04JVMOS'
             },
             {
               from: '/docs/faq/',
-              to: '/docs/最佳实践/22FAQ'
+              to: '/docs/bestPractice/06FAQ'
             },
             {
               from: '/docs/logappender-example/',
-              to: '/docs/4.x/最佳实践/20log'
+              to: '/docs/4.x/bestPractice/06log'
             },
             {
               from: '/docs/order-example/',
-              to: '/docs/4.x/生产者/06message2'
+              to: '/docs/4.x/producer/03message2'
             },
             {
               from: '/docs/schedule-example/',
-              to: '/docs/4.x/生产者/07message3'
+              to: '/docs/4.x/producer/04message3'
             },
             {
               from: '/docs/batch-example/',
-              to: '/docs/4.x/生产者/08message4'
+              to: '/docs/4.x/producer/05message4'
             },
             {
               from: '/docs/transaction-example/',
-              to: '/docs/4.x/生产者/09message5'
+              to: '/docs/4.x/producer/06message5'
             },
             {
               from: '/docs/cluster-deployment/',
-              to: '/docs/4.x/参数配置/24server'
+              to: '/docs/4.x/parameterConfiguration/02server'
             },
             {
               from: '/docs/documentation/',
@@ -225,12 +235,12 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             },
             {
               from: '/docs/best-practice-consumer/',
-              to: '/docs/4.x/最佳实践/15bestpractice'
+              to: '/docs/4.x/bestPractice/01bestpractice'
             },
             {
               from: '/release_notes/',
               to: '/release-notes'
-            },
+            }
           ]
         }
       ]
@@ -274,7 +284,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
         //   // position: "right",
         //   // items: [
         //   //   { to: "/docs/", label: "4.x" },
-        //   //   { to: "/docs/5.0/介绍/02quickstart", label: "5.0" },
+        //   //   { to: "/docs/5.0/介绍/01quickstart", label: "5.0" },
 
         //   //   // ... more items
         //   // ],
@@ -317,7 +327,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
                 { to: "/contact", label: "参与社区" },
                 { to: "/origin", label: "项目起源" },
                 { to: "/team", label: "贡献团队" },
-                { to: "/docs/贡献指南/29how-to-contribute", label: "贡献说明" },
+                { to: "/docs/contributionGuide/01how-to-contribute", label: "贡献说明" },
+                { to: "/enterprise", label: "企业用户" }
                 // ... more items
               ],
             },
@@ -386,11 +397,11 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
               items: [
                 {
                   label: 'Introduction',
-                  to: '/docs/领域模型/01main',
+                  to: '/docs/domainModel/01main',
                 },
                 {
                   label: 'Installation',
-                  to: '/docs/快速入门/02quickstart',
+                  to: '/docs/quickStart/01quickstart',
                 },
                 {
                   label: 'Migration from 4.x to 5.0',
