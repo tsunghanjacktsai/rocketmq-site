@@ -155,8 +155,6 @@ Configure Prometheus's static_config: -targets to the exporter's starting IP and
 
 If the localhost starts at the default localhost:9090, you can view the collected metric values, as shown in the following figure:
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4l66aaa7tj215y0bzwi0.jpg"></img>
-
 :::tip
 For better visualization effects and to observe the trend of metric value changes, Prometheus is better used with Grafana!
 :::
