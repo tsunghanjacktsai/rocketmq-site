@@ -13,19 +13,19 @@
 
 :::tip RocketMQ下载
 
-RocketMQ 的安装包分为两种，二进制包和源码包。 点击[这里](https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.0-source-release.zip) 下载 Apache RocketMQ 5.1.0的源码包。你也可以从[这里](https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.0-bin-release.zip) 下载到二进制包。二进制包是已经编译完成后可以直接运行的，源码包是需要编译后运行的。
+RocketMQ 的安装包分为两种，二进制包和源码包。 点击[这里](https://dist.apache.org/repos/dist/release/rocketmq/5.1.1/rocketmq-all-5.1.1-source-release.zip) 下载 Apache RocketMQ 5.1.1的源码包。你也可以从[这里](https://dist.apache.org/repos/dist/release/rocketmq/5.1.1/rocketmq-all-5.1.1-bin-release.zip) 下载到二进制包。二进制包是已经编译完成后可以直接运行的，源码包是需要编译后运行的。
 
 :::
 
-这里以在Linux环境下利用社区5.1.0的源码包为例，介绍RocketMQ安装过程。
+这里以在Linux环境下利用社区5.1.1的源码包为例，介绍RocketMQ安装过程。
 
-解压5.1.0的源码包并编译构建二进制可执行文件
+解压5.1.1的源码包并编译构建二进制可执行文件
 
 ```shell
-$ unzip rocketmq-all-5.1.0-source-release.zip
-$ cd rocketmq-all-5.1.0-source-release/
+$ unzip rocketmq-all-5.1.1-source-release.zip
+$ cd rocketmq-all-5.1.1-source-release/
 $ mvn -Prelease-all -DskipTests -Dspotbugs.skip=true clean install -U
-$ cd distribution/target/rocketmq-5.1.0/rocketmq-5.1.0
+$ cd distribution/target/rocketmq-5.1.1/rocketmq-5.1.1
 ```
 ## 2. 启动NameServer
 
@@ -57,13 +57,13 @@ NameServer成功启动后，我们启动Broker和Proxy，5.x 版本下我们建�
 $ nohup sh bin/mqbroker -n localhost:9876 --enable-proxy &
 
 ### 验证broker是否启动成功, 比如, broker的ip是192.168.1.2 然后名字是broker-a
-$ tail -f ~/logs/rocketmqlogs/broker_default.log 
+$ tail -f ~/logs/rocketmqlogs/proxy.log 
 The broker[broker-a,192.169.1.2:10911] boot success...
 ```
 
 :::info
 
-我们可以在 broker_default.log 中看到“The broker[brokerName,ip:port] boot success..”，这表明 broker 已成功启动。
+我们可以在 proxy.log 中看到“The broker[brokerName,ip:port] boot success..”，这表明 broker 已成功启动。
 
 :::
 

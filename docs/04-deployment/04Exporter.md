@@ -9,6 +9,8 @@
 :::
 
 `Rocketmq-expoter` 获取监控指标的流程如下图所示，Expoter 通过 MQAdminExt 向 MQ 集群请求数据，请求到的数据通过 MetricService 规范化成 Prometheus 需要的格式，然后通过 /metics 接口暴露给 Promethus。
+![165754739545](../picture/RocketMQ%20Prometheus%20Exporter-1.jpeg)
+
 
 
 ### Metric 结构
@@ -129,6 +131,8 @@ MetricCollectTask 类中有 5 个定时任务，分别为 collectTopicOffset、c
 
 ### Rocketmq-exporter 收集指标流程图
 
+![dafcvznvkldaf](../picture/RocketMQ%20Prometheus%20Exporter%20-%202.jpeg)
+
 ## 快速开始
 
 ### 配置 `application.yml`
@@ -154,6 +158,8 @@ MetricCollectTask 类中有 5 个定时任务，分别为 collectTopicOffset、c
 ### 访问 promethus 页面
 
 本地启动默认为: localhost:9090 ,则可对收集到的指标值进行查看,如下图所示:
+
+![3298559603](../picture/RocketMQ%20Prometheus%20Exporter-3.jpeg)
 
 :::tip
 为了达到更好的可视化效果,观察指标值变化趋势, promethus 搭配 grafana 效果更佳哦!

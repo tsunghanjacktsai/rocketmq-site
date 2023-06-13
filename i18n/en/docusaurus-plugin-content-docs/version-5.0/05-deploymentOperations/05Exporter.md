@@ -8,6 +8,7 @@ In previous versions, there were 87 concurrentHashMaps, but since the Map does n
 :::
 
 The process for `Rocketmq-exporter` to obtain monitoring metrics is shown in the following figure. The exporter requests data from the MQ cluster through MQAdminExt, and the requested data is standardized into the format required by Prometheus through the MetricService, and then exposed to Promethus through the `/metrics` interface.
+![4586095434](../picture/RocketMQ%20Prometheus%20Exporter-1.jpeg)
 
 ### Metric structure
 
@@ -126,6 +127,8 @@ The MetricCollectTask class has five scheduled tasks: collectTopicOffset, collec
 
 ### Rocketmq-exporter collects metrics flowchart 
 
+![95680412354](../picture/RocketMQ%20Prometheus%20Exporter%20-%202.jpeg)
+
 ## Quick star
 
 ### Configure `application.yml`
@@ -151,6 +154,8 @@ Configure Prometheus's static_config: -targets to the exporter's starting IP and
 ### Access the Prometheus page
 
 If the localhost starts at the default localhost:9090, you can view the collected metric values, as shown in the following figure:
+
+![90671925984](../picture/RocketMQ%20Prometheus%20Exporter-3.jpeg)
 
 :::tip
 For better visualization effects and to observe the trend of metric value changes, Prometheus is better used with Grafana!

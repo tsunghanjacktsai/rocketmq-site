@@ -3,6 +3,14 @@
 
 ## 1. Follow Apache RocketMQ Wechat Account
 
+- **WeChat Number: rocketmqcc**
+  ![WeChat](../../static/img/wechat.jpg)
+
+
+- **DingDing Number:21982288**
+  ![DingDing](../../static/img/dingding.jpg)
+
+
 
 ## 2. Read Apache RocketMQ Blog
 - Changelog [➡️](/release-notes)

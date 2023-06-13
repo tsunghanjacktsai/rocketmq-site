@@ -13,19 +13,19 @@ This section will describe steps to quickly deploy a RocketMQ cluster with a sin
 
 :::tip Download RocketMQ
 
-Apache RocketMQ is distributed both in binary and source packages.  Click [here](https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.0-source-release.zip) to download Apache RocketMQ 5.1.0 source package. You may prefer [prebuilt binary package](https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.0-bin-release.zip), which can be run directly since it has been compiled.
+Apache RocketMQ is distributed both in binary and source packages.  Click [here](https://dist.apache.org/repos/dist/release/rocketmq/5.1.1/rocketmq-all-5.1.1-source-release.zip) to download Apache RocketMQ 5.1.1 source package. You may prefer [prebuilt binary package](https://dist.apache.org/repos/dist/release/rocketmq/5.1.1/rocketmq-all-5.1.1-bin-release.zip), which can be run directly since it has been compiled.
 
 :::
 
-The following instruction takes the application of RocketMQ 5.1.0 source package in Linux environment as an example in order to introduce the installation process of RocketMQ.
+The following instruction takes the application of RocketMQ 5.1.1 source package in Linux environment as an example in order to introduce the installation process of RocketMQ.
 
-Extract the source package of RocketMQ 5.1.0, then compile and build the binary executables:
+Extract the source package of RocketMQ 5.1.1, then compile and build the binary executables:
 
 ```shell
-$ unzip rocketmq-all-5.1.0-source-release.zip
-$ cd rocketmq-all-5.1.0-source-release/
+$ unzip rocketmq-all-5.1.1-source-release.zip
+$ cd rocketmq-all-5.1.1-source-release/
 $ mvn -Prelease-all -DskipTests -Dspotbugs.skip=true clean install -U
-$ cd distribution/target/rocketmq-5.1.0/rocketmq-5.1.0
+$ cd distribution/target/rocketmq-5.1.1/rocketmq-5.1.1
 ```
 ## 2. Start NameServer
 
@@ -56,13 +56,13 @@ After nameserver startup, we need start the broker and proxy. We recommend Local
 $ nohup sh bin/mqbroker -n localhost:9876 --enable-proxy &
 
 ### verify broker
-$ tail -f ~/logs/rocketmqlogs/broker_default.log 
+$ tail -f ~/logs/rocketmqlogs/proxy.log 
 The broker[broker-a,192.169.1.2:10911] boot success...
 ```
 
 :::info
 
-Once we see “The broker[brokerName,ip:port] boot success..” from broker.log, it means the Broker has been started successfully.
+Once we see “The broker[brokerName,ip:port] boot success..” from proxy.log, it means the Broker has been started successfully.
 :::
 
 :::note
@@ -125,7 +125,7 @@ We can also try to use the client sdk to send and receive messages, you can see 
 
         public static void main(String[] args) throws ClientException, IOException {
             String endpoint = "localhost:8081";
-            String topic = "YourTopic";
+            String topic = "TestTopic";
             ClientServiceProvider provider = ClientServiceProvider.loadService();
             ClientConfigurationBuilder builder = ClientConfiguration.newBuilder().setEndpoints(endpoint);
             ClientConfiguration configuration = builder.build();
@@ -180,7 +180,7 @@ We can also try to use the client sdk to send and receive messages, you can see 
             String tag = "*";
             FilterExpression filterExpression = new FilterExpression(tag, FilterExpressionType.TAG);
             String consumerGroup = "YourConsumerGroup";
-            String topic = "YourTopic";
+            String topic = "TestTopic";
             PushConsumer pushConsumer = provider.newPushConsumerBuilder()
                 .setClientConfiguration(clientConfiguration)
                 .setConsumerGroup(consumerGroup)

@@ -14,6 +14,12 @@
 
 如下图所示，同一Group ID下的三个Consumer实例C1、C2和C3分别都订阅了TopicA，且订阅TopicA的Tag也都是Tag1，符合订阅关系一致原则。
 
+![1658453577894-0e64b114-cb4a-4220-a09a-62bc1f2943c6](../picture/4.x%E8%AE%A2%E9%98%85%E5%85%B3%E7%B3%BB%E4%B8%80%E8%87%B4-1.jpeg)
+
+
+
+
+
 **正确示例代码一**
 
 C1、C2、C3的订阅关系一致，即C1、C2、C3订阅消息的代码必须完全一致，代码示例如下：
@@ -34,6 +40,8 @@ C1、C2、C3的订阅关系一致，即C1、C2、C3订阅消息的代码必须�
 
 如下图所示，同一Group ID下的三个Consumer实例C1、C2和C3分别都订阅了TopicB，订阅TopicB的Tag也都是Tag2和Tag3，表示订阅TopicB中所有Tag为Tag2或Tag3的消息，且顺序一致都是Tag2||Tag3，符合订阅关系一致性原则。
 
+![1658453865541-118b0cd0-d597-4a76-9561-ae765540567c](../picture/4.x%E8%AE%A2%E9%98%85%E5%85%B3%E7%B3%BB%E4%B8%80%E8%87%B4-2.jpeg)
+
 **正确示例代码二**
 
 C1、C2、C3的订阅关系一致，即C1、C2、C3订阅消息的代码必须完全一致，代码示例如下：
@@ -53,6 +61,8 @@ C1、C2、C3的订阅关系一致，即C1、C2、C3订阅消息的代码必须�
 ### 1.3 订阅多个Topic且订阅多个Tag
 
 如下图所示，同一Group ID下的三个Consumer实例C1、C2和C3分别都订阅了TopicA和TopicB，且订阅的TopicA都未指定Tag，即订阅TopicA中的所有消息，订阅的TopicB的Tag都是Tag2和Tag3，表示订阅TopicB中所有Tag为Tag2或Tag3的消息，且顺序一致都是Tag2||Tag3，符合订阅关系一致原则。
+
+![1658454292557-c07fa0ac-81be-4aac-9c5b-342821c554a6](../picture/4.x%E8%AE%A2%E9%98%85%E5%85%B3%E7%B3%BB%E4%B8%80%E8%87%B4-3.jpeg)
 
 **正确示例代码三**
 
@@ -101,6 +111,8 @@ C1、C2、C3的订阅关系一致，即C1、C2、C3订阅消息的代码必须�
 
 如下图所示，同一Group ID下的三个Consumer实例C1、C2和C3分别订阅了TopicA、TopicB和TopicC，订阅的Topic不一致，不符合订阅关系一致性原则。
 
+![image-20220722102131073](../picture/4.x%E8%AE%A2%E9%98%85%E5%85%B3%E7%B3%BB%E4%B8%80%E8%87%B4-4.jpeg)
+
 **错误示例代码一**
 
 + Consumer实例1-1：
@@ -148,6 +160,8 @@ C1、C2、C3的订阅关系一致，即C1、C2、C3订阅消息的代码必须�
 ### 3.2 同一Group ID下的Consumer实例订阅的Topic相同，但订阅的Tag不一致
 
 如下图所示，同一Group ID下的三个Consumer实例C1、C2和C3分别都订阅了TopicA，但是C1订阅TopicA的Tag为**Tag1**，C2和C3订阅的TopicA的Tag为**Tag2**，订阅同一Topic的Tag不一致，不符合订阅关系一致性原则。
+
+![image-20220722102926055](../picture/4.x%E8%AE%A2%E9%98%85%E5%85%B3%E7%B3%BB%E4%B8%80%E8%87%B4-5.jpeg)
 
 **错误示例代码二**
 
