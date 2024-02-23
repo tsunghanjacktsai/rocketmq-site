@@ -5,6 +5,7 @@ import styles from "./Hero.module.css";
 import Translate, {translate} from '@docusaurus/Translate';
 export default function Hero(){
     return(
+      
      <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <h1 className={clsx("gradient-text",styles.herotitle)}>Apache RocketMQ</h1>
