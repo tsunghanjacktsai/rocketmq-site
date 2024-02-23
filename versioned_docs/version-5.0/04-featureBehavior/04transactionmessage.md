@@ -108,7 +108,7 @@ Apache RocketMQ 事务消息为最终一致性，即在消息提交到下游消�
 
 **事务超时机制**
 
-Apache RocketMQ 事务消息的命周期存在超时机制，即半事务消息被生产者发送服务端后，如果在指定时间内服务端无法确认提交或者回滚状态，则消息默认会被回滚。事务超时时间，请参见[参数限制](../01-introduction/03limits.md)。
+Apache RocketMQ 事务消息的生命周期存在超时机制，即半事务消息被生产者发送服务端后，如果在指定时间内服务端无法确认提交或者回滚状态，则消息默认会被回滚。事务超时时间，请参见[参数限制](../01-introduction/03limits.md)。
 
 ## 使用示例
 
@@ -117,7 +117,7 @@ Apache RocketMQ 事务消息的命周期存在超时机制，即半事务消息�
 Apache RocketMQ 5.0版本下创建主题操作，推荐使用mqadmin工具，需要注意的是，对于消息类型需要通过属性参数添加。示例如下：
 
 ```shell
-sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name> -a +message.type=Transaction
+sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name> -a +message.type=TRANSACTION
 ```
 
 **发送消息**
@@ -156,7 +156,7 @@ sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name>
     }
     public static void main(String[] args) throws ClientException {
         ClientServiceProvider provider = new ClientServiceProvider();
-        MessageBuilder messageBuilder = new MessageBuilder();
+        MessageBuilder messageBuilder = new MessageBuilderImpl();
         //构造事务生产者：事务消息需要生产者构建一个事务检查器，用于检查确认异常半事务的中间状态。
         Producer producer = provider.newProducerBuilder()
                 .setTransactionChecker(messageView -> {

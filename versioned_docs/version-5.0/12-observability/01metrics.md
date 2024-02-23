@@ -112,7 +112,7 @@ gRPC OTLP exporter 会周期性地向指定的 OpenTelemetry Collector 上报 me
 开启 Broker metrics 的 gRPC OTLP exporter 需要进行以下配置：
 
 1. 将 `metricsExporterType` 设置为 `OTLP_GRPC`
-2. 将 `getMetricsGrpcExporterTarget` 设置为 OpenTelemetry Collector 提供的 endpoint
+2. 将 `metricsGrpcExporterTarget` 设置为 OpenTelemetry Collector 提供的 endpoint
 
 可选配置：
 
@@ -133,4 +133,4 @@ Prometheus exporter 仅支持 Pull 模式和 Cumulative 聚合，详见 [OpenTel
 可选配置：
 
 1. `metricsPromExporterPort`：Broker 暴露 metrics 服务的端口号，默认为 `5557`
-2. `metricGrpcExporterTimeOutInMills`：暴露 metrics 服务的主机名，默认为 Broker 向 NameServer 注册的地址，即 `brokerIP1`
+2. `metricsPromExporterHost`：暴露 metrics 服务的主机名，默认为 Broker 向 NameServer 注册的地址，即 `brokerIP1`

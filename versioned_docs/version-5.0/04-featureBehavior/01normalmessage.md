@@ -46,7 +46,7 @@
 Apache RocketMQ 5.0版本下创建主题操作，推荐使用mqadmin工具，需要注意的是，对于消息类型需要通过属性参数添加。示例如下：
 
 ```shell
-sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name> -a +message.type=Normal
+sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name> -a +message.type=NORMAL
 ```
 
 **发送消息**
@@ -54,7 +54,7 @@ sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name>
 
 ```java
 //普通消息发送。
-MessageBuilder messageBuilder = new MessageBuilder();
+MessageBuilder messageBuilder = new MessageBuilderImpl();
 Message message = messageBuilder.setTopic("topic")
     //设置消息索引键，可根据关键字精确查找某条消息。
     .setKeys("messageKey")

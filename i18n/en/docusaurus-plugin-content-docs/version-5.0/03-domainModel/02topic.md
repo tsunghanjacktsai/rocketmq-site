@@ -59,7 +59,7 @@ A topic contains one or more queues. Message storage and scalability are impleme
 
   * Transaction: [Transaction messages](../04-featureBehavior/04transactionmessage.md). Apache RocketMQ supports distributed transaction messages and ensures transaction consistency of database updates and message calls.
 
-* Constraint: Starting from version 5.0, Apache RocketMQ supports enforcing the validation of message types, that is, each topic only allows messages of a single type to be sent. This can better facilitate operation and management of production systems and avoid confusion. However, to ensure backward compatibility with version 4.x, the validation feature is disabled by default. It is recommended to enable it manually through the server parameter "enableTopicMessageTypeCheck".
+* Constraint: Starting from version 5.0, Apache RocketMQ supports enforcing the validation of message types, that is, each topic only allows messages of a single type to be sent. This can better facilitate operation and management of production systems and avoid confusion. However, to ensure backward compatibility with version 4.x, the validation feature is enable by default.
 
 
 ## Behavior constraints
@@ -68,9 +68,9 @@ A topic contains one or more queues. Message storage and scalability are impleme
 
 Apache RocketMQ version 5.x allows you to specify a message type for a topic. This way, you can manage and process messages of the specified type in a separate topic. Apache RocketMQ forcibly verifies the type of messages that are sent and the message type of the topic to which the messages are sent. If message type verification fails, message delivery requests are rejected, and a type mismatch error is returned. The following verification rules apply:
 
-* Consistent message typesThe messages that you want to send must use the same message type as the message type that is specified for the topic to which you want to send the messages.
+* Consistent message types. The messages that you want to send must use the same message type as the message type that is specified for the topic to which you want to send the messages.
 
-* Only one type of messages sent to a topicThe messages that you want to send to a topic must use the same message type. Only one message type can be specified for a topic.
+* Only one type of messages sent to a topic. The messages that you want to send to a topic must use the same message type. Only one message type can be specified for a topic.
 
 :::info
 

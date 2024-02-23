@@ -138,7 +138,7 @@ sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name>
 **创建FIFO主题**
 
 ```bash
-./bin/mqadmin updateTopic -c DefaultCluster -t FIFOTopic -o true -n 127.0.0.1:9876
+./bin/mqadmin updateTopic -c DefaultCluster -t FIFOTopic -o true -n 127.0.0.1:9876 -a +message.type=FIFO
 ```
 
 + -c 集群名称
@@ -152,7 +152,7 @@ sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name>
 
 ```java
         //顺序消息发送。
-        MessageBuilder messageBuilder = null;
+        MessageBuilder messageBuilder = new MessageBuilderImpl();;
         Message message = messageBuilder.setTopic("topic")
                 //设置消息索引键，可根据关键字精确查找某条消息。
                 .setKeys("messageKey")
@@ -206,7 +206,7 @@ sh mqadmin updateTopic -n <nameserver_address> -t <topic_name> -c <cluster_name>
 
 **串行消费，避免批量消费导致乱序**
 
-消息消费建议串行处理，避免一次消费多条消费，否则可能出现乱序情况。
+消息消费建议串行处理，避免一次消费多条消息，否则可能出现乱序情况。
 
 例如：发送顺序为1-\>2-\>3-\>4，消费时批量消费，消费顺序为1-\>23（批量处理，失败）-\>23（重试处理）-\>4，此时可能由于消息3的失败导致消息2被重复处理，最后导致消息消费乱序。
 
