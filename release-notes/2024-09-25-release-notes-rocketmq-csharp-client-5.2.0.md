@@ -1,5 +1,5 @@
 ---
-title: "Release Notes - Apache RocketMQ Client C#- Version 5.2.0"
+title: "Release Notes - Apache RocketMQ Client C# - Version 5.2.0"
 categories:
   - Release_Notes
 tags:
