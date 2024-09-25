@@ -1,4 +1,4 @@
-# 快速开始
+# 本地部署 RocketMQ
 
 这一节介绍如何快速部署一个单节点单副本 RocketMQ 服务，并完成简单的消息收发。
 
@@ -13,19 +13,19 @@
 
 :::tip RocketMQ下载
 
-RocketMQ 的安装包分为两种，二进制包和源码包。 点击[这里](https://dist.apache.org/repos/dist/release/rocketmq/5.2.0/rocketmq-all-5.2.0-source-release.zip) 下载 Apache RocketMQ 5.2.0的源码包。你也可以从[这里](https://dist.apache.org/repos/dist/release/rocketmq/5.2.0/rocketmq-all-5.2.0-bin-release.zip) 下载到二进制包。二进制包是已经编译完成后可以直接运行的，源码包是需要编译后运行的。
+RocketMQ 的安装包分为两种，二进制包和源码包。 点击[这里](https://dist.apache.org/repos/dist/release/rocketmq/5.3.0/rocketmq-all-5.3.0-source-release.zip) 下载 Apache RocketMQ 5.3.0的源码包。你也可以从[这里](https://dist.apache.org/repos/dist/release/rocketmq/5.3.0/rocketmq-all-5.3.0-bin-release.zip) 下载到二进制包。二进制包是已经编译完成后可以直接运行的，源码包是需要编译后运行的。
 
 :::
 
-这里以在Linux环境下利用社区5.2.0的源码包为例，介绍RocketMQ安装过程。
+这里以在Linux环境下利用社区5.3.0的源码包为例，介绍RocketMQ安装过程。
 
-解压5.2.0的源码包并编译构建二进制可执行文件
+解压5.3.0的源码包并编译构建二进制可执行文件
 
 ```shell
-$ unzip rocketmq-all-5.2.0-source-release.zip
-$ cd rocketmq-all-5.2.0-source-release/
+$ unzip rocketmq-all-5.3.0-source-release.zip
+$ cd rocketmq-all-5.3.0-source-release/
 $ mvn -Prelease-all -DskipTests -Dspotbugs.skip=true clean install -U
-$ cd distribution/target/rocketmq-5.2.0/rocketmq-5.2.0
+$ cd distribution/target/rocketmq-5.3.0/rocketmq-5.3.0
 ```
 ## 2. 启动NameServer
 
@@ -50,7 +50,7 @@ The Name Server boot success...
 
 ## 3. 启动Broker+Proxy
 
-NameServer成功启动后，我们启动Broker和Proxy，5.x 版本下我们建议使用 Local 模式部署，即 Broker 和 Proxy 同进程部署。5.x 版本也支持 Broker 和 Proxy 分离部署以实现更灵活的集群能力。详情参考[部署教程](../05-deploymentOperations/01deploy.md)。
+NameServer成功启动后，我们启动Broker和Proxy。这里我们使用 Local 模式部署，即 Broker 和 Proxy 同进程部署。5.x 版本也支持 Broker 和 Proxy 分离部署以实现更灵活的集群能力。详情参考[部署教程](../05-deploymentOperations/01deploy.md)。
 
 ```shell
 ### 先启动broker
@@ -120,12 +120,12 @@ $ sh bin/tools.sh org.apache.rocketmq.example.quickstart.Consumer
     import org.apache.rocketmq.client.apis.producer.SendReceipt;
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
-
+    
     public class ProducerExample {
         private static final Logger logger = LoggerFactory.getLogger(ProducerExample.class);
-
+    
         public static void main(String[] args) throws ClientException {
-            // 接入点地址，需要设置成Proxy的地址和端口列表，一般是xxx:8081;xxx:8081。
+            // 接入点地址，需要设置成Proxy的地址和端口列表，一般是xxx:8080;xxx:8081。
             String endpoint = "localhost:8081";
             // 消息发送的目标Topic名称，需要提前创建。
             String topic = "TestTopic";
@@ -174,13 +174,13 @@ $ sh bin/tools.sh org.apache.rocketmq.example.quickstart.Consumer
     import org.apache.rocketmq.client.apis.consumer.PushConsumer;
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
-
+    
     public class PushConsumerExample {
         private static final Logger logger = LoggerFactory.getLogger(PushConsumerExample.class);
-
+    
         private PushConsumerExample() {
         }
-
+    
         public static void main(String[] args) throws ClientException, IOException, InterruptedException {
             final ClientServiceProvider provider = ClientServiceProvider.loadService();
             // 接入点地址，需要设置成Proxy的地址和端口列表，一般是xxx:8081;xxx:8081。
